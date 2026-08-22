@@ -4,10 +4,77 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Сборка мира — корни с чередованием</title>
 <style>
-:root{--ink:#302b3c;--paper:#fff8e9;--cream:#f4e3c4;--violet:#57538b;--violet2:#7772ad;--green:#527257;--mint:#dfead2;--gold:#e8a94a;--red:#b64c52;--shadow:0 12px 34px #302b3c20;--r:22px}*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:ui-rounded,"Trebuchet MS",Arial,sans-serif;color:var(--ink);background:#d6e0c6}body{background:radial-gradient(circle at 20% 10%,#fff6dc55,transparent 24%),linear-gradient(145deg,#a9c78f,#719679)}button{font:inherit;min-height:44px;cursor:pointer}.app{min-height:100vh;display:grid;grid-template-rows:auto 1fr}.topbar{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:14px;padding:10px max(16px,calc((100vw - 1280px)/2));background:#fff8e9ee;border-bottom:2px solid #ffffff;backdrop-filter:blur(10px)}.brand{font-weight:900;white-space:nowrap}.progress-wrap{flex:1}.progress-label{display:flex;justify-content:space-between;font-size:.8rem;margin-bottom:4px}.track{height:10px;background:#d9d2c5;border-radius:9px;overflow:hidden}.fill{height:100%;width:0;background:linear-gradient(90deg,var(--gold),#e27e55);transition:.3s}.iconbtn,.theory-btn{border:2px solid var(--violet);background:#fff;border-radius:14px;color:var(--violet);padding:8px 14px;font-weight:800}.shell{width:min(1280px,100%);margin:auto;padding:22px;display:grid;grid-template-columns:260px 1fr;gap:20px}.map{background:#f5e6c9;border:3px solid #fff4dd;border-radius:var(--r);padding:18px;box-shadow:var(--shadow);align-self:start;position:sticky;top:82px}.map h2{font-size:1rem;margin:0 0 14px}.map-step{display:grid;grid-template-columns:38px 1fr;gap:10px;align-items:center;padding:8px 0;opacity:.48}.map-step.active,.map-step.done{opacity:1}.map-step .dot{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:#cabfdd;border:2px solid #fff}.map-step.done .dot{background:#7fa273}.map-step.active .dot{box-shadow:0 0 0 4px #e8a94a55}.map-step small{display:block}.scene{background:var(--paper);border:3px solid #fff4dd;border-radius:28px;box-shadow:var(--shadow);overflow:hidden;min-height:690px}.hero{min-height:210px;padding:30px;background:linear-gradient(150deg,#555181dd,#717cacdd),linear-gradient(#506b62,#263e38);color:#fff;position:relative;overflow:hidden}.hero:after{content:none;position:absolute;right:35px;bottom:20px;font-size:clamp(2rem,7vw,6rem);font-weight:900;opacity:.12}.hero h1{font-size:clamp(2rem,5vw,4.6rem);line-height:.95;margin:8px 0 14px;max-width:750px}.hero p{max-width:700px;font-size:1.08rem}.badge{display:inline-flex;align-items:center;min-height:32px;padding:4px 10px;border:1px solid #ffffff99;border-radius:99px;background:#ffffff19;font-weight:800}.content{padding:26px}.start-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:18px}.card{background:#fff;border:2px solid #eadfc9;border-radius:18px;padding:18px}.card h2,.card h3{margin-top:0}.primary{border:0;background:var(--violet);color:white;border-radius:14px;padding:12px 22px;font-weight:900}.primary:hover,.primary:focus-visible{background:#413d72}.secondary{border:2px solid var(--violet);background:#fff;color:var(--violet);border-radius:14px;padding:10px 18px;font-weight:900}.task-head{display:flex;gap:12px;justify-content:space-between;align-items:flex-start}.task-head h2{margin:4px 0}.kicker{color:var(--violet);font-weight:900;font-size:.82rem;text-transform:uppercase;letter-spacing:.06em}.prompt{font-size:1.25rem;line-height:1.45;background:#f5eddc;border-radius:16px;padding:18px;margin:16px 0}.options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.option{min-height:58px;text-align:left;border:2px solid #d9cfbd;background:#fff;border-radius:14px;padding:12px 16px}.option:hover,.option:focus-visible{border-color:var(--violet)}.option.selected{background:#e9e6f7;border-color:var(--violet);box-shadow:0 0 0 2px #57538b33}.option[aria-pressed="true"]:before{content:"✓ ";font-weight:900}.actions{display:flex;gap:10px;justify-content:flex-end;margin-top:18px;flex-wrap:wrap}.feedback{padding:14px 16px;border-radius:14px;margin-top:16px}.feedback.ok{background:#e1edd9;color:#254b2f}.feedback.bad{background:#f9dddd;color:#7b292d}.theory{margin:12px 0;padding:16px;border-radius:16px;background:#eef0fb;border-left:5px solid var(--violet)}.theory[hidden]{display:none}.theory p{margin:.4em 0}.theory .example{color:#565069;font-style:italic}.resource{display:flex;gap:12px;align-items:center;background:#fff0c8;border:2px dashed #d99b39;padding:16px;border-radius:16px;margin:18px 0}.placeholder{display:grid;place-items:center;min-height:86px;border:2px dashed #ffffff88;border-radius:16px;background:#ffffff14;font-weight:900}.word-grid{display:flex;gap:10px;flex-wrap:wrap}.word{border:2px solid #d9cfbd;background:white;border-radius:12px;padding:10px 14px;min-height:48px}.word.selected{background:#e9e6f7;border-color:var(--violet)}.maze{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;max-width:440px;margin:auto}.maze .option{text-align:center}.stats{width:100%;border-collapse:collapse}.stats th,.stats td{text-align:left;padding:10px;border-bottom:1px solid #ded5c6}.reflection{display:grid;gap:10px}.reflection label{display:flex;gap:10px;align-items:center;padding:12px;background:#fff;border:2px solid #ded5c6;border-radius:14px}.reflection input{width:22px;height:22px}.final-map{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:18px 0}.final-map .card{text-align:center;padding:12px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.board-layer{position:fixed;inset:0;z-index:50;background:#fff8e90a;display:grid;grid-template-rows:auto 1fr;backdrop-filter:brightness(.96)}.board-layer[hidden]{display:none}.board-tools{display:flex;gap:10px;justify-content:center;padding:10px;background:#302b3ce8;color:white}.board-tools button{border:1px solid #fff;background:#fff;color:#302b3c;border-radius:12px;padding:8px 14px}#board{width:100%;height:100%;touch-action:none;cursor:crosshair}.board-note{position:absolute;left:16px;bottom:10px;background:#302b3cdd;color:#fff;padding:6px 10px;border-radius:8px;font-size:.8rem;pointer-events:none}@media(max-width:850px){.shell{grid-template-columns:1fr;padding:12px}.map{position:static;display:flex;overflow:auto;gap:16px}.map h2{display:none}.map-step{min-width:150px}.scene{min-height:0}.hero{min-height:180px;padding:22px}.start-grid{grid-template-columns:1fr}.content{padding:18px}.final-map{grid-template-columns:1fr 1fr}.topbar{padding:8px 10px}.brand{font-size:.85rem}}@media(max-width:520px){.shell{padding:0}.scene{border-radius:0;border-left:0;border-right:0}.map{border-radius:0}.options{grid-template-columns:1fr}.task-head{display:block}.theory-btn{margin-top:10px}.hero h1{font-size:2.6rem}.final-map{grid-template-columns:1fr}.topbar{flex-wrap:wrap}.progress-wrap{order:3;flex-basis:100%}.content{padding:15px}.prompt{font-size:1.08rem}}
-.drag-token{min-height:52px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;padding:10px 18px;width:max-content;max-width:100%;border:2px solid var(--gold);border-radius:14px;background:#fff0c8;font-weight:900;cursor:grab}.dropzone{border-style:dashed}.dropzone.dragover{background:#fff0c8;border-color:var(--gold)}.maze .option.selected{background:#dcebd5;border-color:#527257;color:#24412a;box-shadow:0 0 0 3px #52725733}.maze .option.selected:before{content:attr(data-step) " · ";font-weight:900}.maze .option[data-n="0"]:after{content:"  [СТАРТ]";display:block;font-size:.7rem;color:#527257}.maze .option[data-n="8"]:after{content:"  [ФИНИШ]";display:block;font-size:.7rem;color:#57538b}.maze-note{min-height:24px;margin-top:10px;text-align:center;color:#675f73;font-weight:700}.letter-tray{display:flex;align-items:center;justify-content:center;gap:10px;min-height:60px;margin:12px 0;padding:8px;background:#f5eddc;border-radius:14px}.letter-tray button{min-width:48px;border:2px solid var(--violet);border-radius:12px;background:#fff;color:var(--violet);font-weight:900;text-transform:lowercase}.fill-card.active{border-color:var(--gold);box-shadow:0 0 0 3px #e8a94a44}.fill-card.filled{border-color:#8ca17c}.fill-card .slot{display:inline-grid;place-items:center;min-width:28px;height:32px;margin:0 2px;border-bottom:3px solid var(--violet);color:var(--violet);font-weight:900}.fill-help{text-align:center;color:#675f73;font-size:.9rem}.paint-strip{display:flex;justify-content:center;align-items:stretch;flex-wrap:wrap;margin:28px auto;max-width:760px}.paint-part{min-height:64px;padding:12px 4px;border:0;border-top:3px solid #d8cdb9;border-bottom:3px solid #d8cdb9;background:#fff;font-size:clamp(1.35rem,3vw,2.2rem);font-weight:900}.paint-part:first-child{padding-left:18px;border-left:3px solid #d8cdb9;border-radius:16px 0 0 16px}.paint-part:last-child{padding-right:18px;border-right:3px solid #d8cdb9;border-radius:0 16px 16px 0}.paint-part.selected{background:#f2b95f;color:#352b20;box-shadow:inset 0 -6px 0 #c97939}.paint-part:focus-visible{outline:3px solid var(--violet);outline-offset:2px}
+:root{--ink:#302b3c;--paper:#fff8e9;--cream:#f4e3c4;--violet:#57538b;--violet2:#7772ad;--green:#527257;--mint:#dfead2;--gold:#e8a94a;--red:#b64c52;--shadow:0 12px 34px #302b3c20;--r:22px}*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:ui-rounded,"Trebuchet MS",Arial,sans-serif;color:var(--ink);background:#d6e0c6}body{background:radial-gradient(circle at 20% 10%,#fff6dc55,transparent 24%),linear-gradient(145deg,#a9c78f,#719679)}button{font:inherit;min-height:44px;cursor:pointer}.app{min-height:100vh;display:grid;grid-template-rows:auto 1fr}.topbar{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:14px;padding:10px max(16px,calc((100vw - 1280px)/2));background:#fff8e9ee;border-bottom:2px solid #ffffff;backdrop-filter:blur(10px)}.brand{font-weight:900;white-space:nowrap}.progress-wrap{flex:1}.progress-label{display:flex;justify-content:space-between;font-size:.8rem;margin-bottom:4px}.track{height:10px;background:#d9d2c5;border-radius:9px;overflow:hidden}.fill{height:100%;width:0;background:linear-gradient(90deg,var(--gold),#e27e55);transition:.3s}.iconbtn,.theory-btn{border:2px solid var(--violet);background:#fff;border-radius:14px;color:var(--violet);padding:8px 14px;font-weight:800;min-width:44px;touch-action:manipulation}.shell{width:min(1280px,100%);margin:auto;padding:22px;display:grid;grid-template-columns:260px 1fr;gap:20px}.map{background:#f5e6c9;border:3px solid #fff4dd;border-radius:var(--r);padding:18px;box-shadow:var(--shadow);align-self:start;position:sticky;top:82px}.map h2{font-size:1rem;margin:0 0 14px}.map-step{display:grid;grid-template-columns:38px 1fr;gap:10px;align-items:center;padding:8px 0;opacity:.48}.map-step.active,.map-step.done{opacity:1}.map-step .dot{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:#cabfdd;border:2px solid #fff}.map-step.done .dot{background:#7fa273}.map-step.active .dot{box-shadow:0 0 0 4px #e8a94a55}.map-step small{display:block}.scene{background:var(--paper);border:3px solid #fff4dd;border-radius:28px;box-shadow:var(--shadow);overflow:hidden;min-height:690px}.hero{min-height:210px;padding:30px;background:linear-gradient(150deg,#555181dd,#717cacdd),linear-gradient(#506b62,#263e38);color:#fff;position:relative;overflow:hidden}.hero:after{content:none;position:absolute;right:35px;bottom:20px;font-size:clamp(2rem,7vw,6rem);font-weight:900;opacity:.12}.hero h1{font-size:clamp(2rem,5vw,4.6rem);line-height:.95;margin:8px 0 14px;max-width:750px}.hero p{max-width:700px;font-size:1.08rem}.badge{display:inline-flex;align-items:center;min-height:32px;padding:4px 10px;border:1px solid #ffffff99;border-radius:99px;background:#ffffff19;font-weight:800}.content{padding:26px}.start-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:18px}.card{background:#fff;border:2px solid #eadfc9;border-radius:18px;padding:18px}.card h2,.card h3{margin-top:0}.primary{border:0;background:var(--violet);color:white;border-radius:14px;padding:12px 22px;font-weight:900}.primary:hover,.primary:focus-visible{background:#413d72}.secondary{border:2px solid var(--violet);background:#fff;color:var(--violet);border-radius:14px;padding:10px 18px;font-weight:900}.task-head{display:flex;gap:12px;justify-content:space-between;align-items:flex-start}.task-head h2{margin:4px 0}.kicker{color:var(--violet);font-weight:900;font-size:.82rem;text-transform:uppercase;letter-spacing:.06em}.prompt{font-size:1.25rem;line-height:1.45;background:#f5eddc;border-radius:16px;padding:18px;margin:16px 0}.options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.option{min-height:58px;text-align:left;border:2px solid #d9cfbd;background:#fff;border-radius:14px;padding:12px 16px;touch-action:manipulation}.option:hover,.option:focus-visible{border-color:var(--violet)}.option.selected{background:#e9e6f7;border-color:var(--violet);box-shadow:0 0 0 2px #57538b33}.option[aria-pressed="true"]:before{content:"✓ ";font-weight:900}.actions{display:flex;gap:10px;justify-content:flex-end;margin-top:18px;flex-wrap:wrap}.feedback{padding:14px 16px;border-radius:14px;margin-top:16px}.feedback.ok{background:#e1edd9;color:#254b2f}.feedback.bad{background:#f9dddd;color:#7b292d}.theory{margin:12px 0;padding:16px;border-radius:16px;background:#eef0fb;border:2px solid #d7d5ef;border-left:5px solid var(--violet);box-shadow:0 8px 20px #302b3c12}.theory[hidden]{display:none}.theory p{margin:.4em 0}.theory .example{color:#565069;font-style:italic}.resource{display:flex;gap:12px;align-items:center;background:#fff0c8;border:2px dashed #d99b39;padding:16px;border-radius:16px;margin:18px 0}.placeholder{display:grid;place-items:center;min-height:86px;border:2px dashed #ffffff88;border-radius:16px;background:#ffffff14;font-weight:900}.word-grid{display:flex;gap:10px;flex-wrap:wrap}.word{border:2px solid #d9cfbd;background:white;border-radius:12px;padding:10px 14px;min-height:48px;touch-action:manipulation}.word.selected{background:#e9e6f7;border-color:var(--violet)}.maze{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;max-width:440px;margin:auto}.maze .option{text-align:center}.stats{width:100%;border-collapse:collapse}.stats th,.stats td{text-align:left;padding:10px;border-bottom:1px solid #ded5c6}.reflection{display:grid;gap:10px}.reflection label{display:flex;gap:10px;align-items:center;padding:12px;background:#fff;border:2px solid #ded5c6;border-radius:14px}.reflection input{width:22px;height:22px}.final-map{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:18px 0}.final-map .card{text-align:center;padding:12px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.board-layer{position:fixed;inset:0;z-index:50;background:#fff8e90a;display:grid;grid-template-rows:auto 1fr;backdrop-filter:brightness(.96)}.board-layer[hidden]{display:none}.board-tools{display:flex;gap:10px;justify-content:center;padding:10px;background:#302b3ce8;color:white}.board-tools button{border:1px solid #fff;background:#fff;color:#302b3c;border-radius:12px;padding:8px 14px}#board{width:100%;height:100%;touch-action:none;cursor:crosshair}.board-note{position:absolute;left:16px;bottom:10px;background:#302b3cdd;color:#fff;padding:6px 10px;border-radius:8px;font-size:.8rem;pointer-events:none}@media(max-width:850px){.shell{grid-template-columns:1fr;padding:12px}.map{position:static;display:flex;overflow:auto;gap:16px}.map h2{display:none}.map-step{min-width:150px}.scene{min-height:0}.hero{min-height:180px;padding:22px}.start-grid{grid-template-columns:1fr}.content{padding:18px}.final-map{grid-template-columns:1fr 1fr}.topbar{padding:8px 10px}.brand{font-size:.85rem}}@media(max-width:520px){.shell{padding:0}.theory{max-height:42vh;overflow:auto}.board-tools{position:relative;z-index:2;flex-wrap:wrap}.board-note{max-width:calc(100% - 32px)}.scene{border-radius:0;border-left:0;border-right:0}.map{border-radius:0}.options{grid-template-columns:1fr}.task-head{display:block}.theory-btn{margin-top:10px}.hero h1{font-size:2.6rem}.final-map{grid-template-columns:1fr}.topbar{flex-wrap:wrap}.progress-wrap{order:3;flex-basis:100%}.content{padding:15px}.prompt{font-size:1.08rem}}
+.drag-token{min-height:52px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;padding:10px 18px;width:max-content;max-width:100%;border:2px solid var(--gold);border-radius:14px;background:#fff0c8;font-weight:900;cursor:grab}.dropzone{border-style:dashed}.dropzone.dragover{background:#fff0c8;border-color:var(--gold)}.maze .option.selected{background:#dcebd5;border-color:#527257;color:#24412a;box-shadow:0 0 0 3px #52725733}.maze .option.selected:before{content:attr(data-step) " · ";font-weight:900}.maze .option[data-n="0"]:after{content:"  [СТАРТ]";display:block;font-size:.7rem;color:#527257}.maze .option[data-n="15"]:after{content:"  [ФИНИШ]";display:block;font-size:.7rem;color:#57538b}.maze-note{min-height:24px;margin-top:10px;text-align:center;color:#675f73;font-weight:700}.letter-tray{display:flex;align-items:center;justify-content:center;gap:10px;min-height:60px;margin:12px 0;padding:8px;background:#f5eddc;border-radius:14px}.letter-tray button{min-width:48px;border:2px solid var(--violet);border-radius:12px;background:#fff;color:var(--violet);font-weight:900;text-transform:lowercase}.fill-card.active{border-color:var(--gold);box-shadow:0 0 0 3px #e8a94a44}.fill-card.filled{border-color:#8ca17c}.fill-card .slot{display:inline-grid;place-items:center;min-width:28px;height:32px;margin:0 2px;border-bottom:3px solid var(--violet);color:var(--violet);font-weight:900}.fill-help{text-align:center;color:#675f73;font-size:.9rem}.paint-strip{display:flex;justify-content:center;align-items:stretch;flex-wrap:wrap;margin:28px auto;max-width:760px}.paint-part{min-height:64px;padding:12px 4px;border:0;border-top:3px solid #d8cdb9;border-bottom:3px solid #d8cdb9;background:#fff;font-size:clamp(1.35rem,3vw,2.2rem);font-weight:900}.paint-part:first-child{padding-left:18px;border-left:3px solid #d8cdb9;border-radius:16px 0 0 16px}.paint-part:last-child{padding-right:18px;border-right:3px solid #d8cdb9;border-radius:0 16px 16px 0}.paint-part.selected{background:#f2b95f;color:#352b20;box-shadow:inset 0 -6px 0 #c97939}.paint-part:focus-visible{outline:3px solid var(--violet);outline-offset:2px}
 /* Generated visual asset integration */
 .hero{background-image:linear-gradient(100deg,#363252ed 0%,#56527bc9 58%,#56527b66),var(--hero-image);background-size:cover;background-position:center}.hero:after{content:none}.intro-hero,.scene[data-view="start"]{--hero-image:url('02_assets/forest_intro_bg.png')}.scene[data-series="0"]{--hero-image:url('02_assets/flooded_lowland_bg.png')}.scene[data-series="1"]{--hero-image:url('02_assets/fire_clearing_bg.png')}.scene[data-series="2"]{--hero-image:url('02_assets/fog_hollow_bg.png')}.scene[data-series="3"]{--hero-image:url('02_assets/overgrown_path_bg.png')}.scene[data-series="4"],.scene[data-view="stats"]{--hero-image:url('02_assets/watchtower_bg.png')}.scene[data-view="reflection"],.scene[data-view="final"]{--hero-image:url('02_assets/saved_forest_bg.png')}.asset-thumb{width:52px;height:52px;object-fit:contain;border-radius:12px;background:#fff}.map-avatar{width:26px;height:26px;object-fit:contain;vertical-align:middle;margin-right:5px}.resource-art{width:min(280px,70vw);height:210px;object-fit:contain;display:block;margin:auto}.reward-art{display:grid;place-items:center;min-height:250px;border-radius:18px;background:#fff}.character-callout{display:flex;align-items:center;gap:14px}.character-callout img{width:92px;height:110px;object-fit:contain}.final-scene{position:relative;min-height:300px;overflow:hidden;border-radius:18px;background:#dfead2}.final-scene-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.final-friends{position:absolute;right:4%;bottom:0;width:min(46%,420px);max-height:92%;object-fit:contain}.final-map .asset-thumb{margin:0 auto 8px}.resource-badge{width:86px;height:86px;object-fit:contain}
+.context-line{font-size:1.18rem;line-height:1.9;background:#fffdf7;border:2px solid #eadfc9;border-radius:16px;padding:14px 17px}.context-word{display:inline-block;border:1px solid transparent;background:transparent;border-radius:6px;padding:1px 2px;min-height:0;font:inherit;color:inherit;vertical-align:baseline;touch-action:manipulation}.context-word:hover,.context-word:focus-visible{background:#f5eddc;border-color:#c8c2df;outline:none}.context-word.selected{background:#e9e6f7;border-color:var(--violet);box-shadow:inset 0 -2px 0 var(--violet)}.baskets{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:14px}.basket{min-height:190px;border:3px solid #c79b5a;border-radius:18px 18px 42px 42px;background:linear-gradient(#fff7df,#f1d49e);padding:14px}.basket h3{text-align:center;margin:0 0 10px;font-size:1rem}.basket-drop{display:flex;flex-wrap:wrap;gap:8px;align-content:flex-start;min-height:120px}.sort-tray{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}.sort-chip,.basket-chip{border:2px solid var(--violet);background:#fff;border-radius:999px;padding:9px 12px;font-weight:800}.sort-chip.assigned{opacity:.35}.basket-note{text-align:center;color:#675f73;font-size:.9rem;margin-top:8px}@media(max-width:650px){.baskets{grid-template-columns:1fr}.context-line{font-size:1.05rem;line-height:2}}
+@media(min-width:851px){
+  html,body{height:100%;overflow:hidden}
+  .app{height:100vh;min-height:0}
+  .topbar{min-height:54px;padding-top:7px;padding-bottom:7px}
+  .shell{height:calc(100vh - 54px);min-height:0;padding:12px 22px;align-items:center;overflow:hidden}
+  .map{top:auto;padding:14px 16px}
+  .map-step{padding:5px 0}
+  .scene[data-view="task"]{height:calc(100vh - 78px);max-height:810px;min-height:0;overflow:hidden}
+  .scene[data-view="task"] .hero{min-height:142px;height:142px;padding:18px 24px}
+  .scene[data-view="task"] .hero h1{font-size:clamp(2.35rem,4vw,3.65rem);margin:6px 0 8px}
+  .scene[data-view="task"] .hero p{margin:6px 0;font-size:1rem}
+  .scene[data-view="task"] .content{padding:16px 20px}
+  .scene[data-view="task"] .task-head h2{margin:2px 0;font-size:1.35rem}
+  .scene[data-view="task"] .prompt{font-size:1.08rem;line-height:1.35;padding:13px 15px;margin:11px 0}
+  .scene[data-view="task"] .options{gap:8px}
+  .scene[data-view="task"] .options.single-column{grid-template-columns:1fr;max-width:760px}
+  .scene[data-view="task"] .option{min-height:48px;padding:9px 13px}
+  .scene[data-view="task"] .word{min-height:44px;padding:8px 11px}
+  .scene[data-view="task"] .actions{margin-top:11px}
+  .scene[data-view="task"] .feedback{margin-top:9px;padding:10px 13px}
+  .scene[data-view="task"] .theory{margin:8px 0;padding:11px 13px}
+  .scene[data-view="task"] .maze{max-width:520px;gap:7px}
+  .scene[data-view="task"] .maze .option{min-height:47px;padding:6px 8px}
+  .scene[data-view="task"] .context-line{font-size:1.08rem;line-height:1.85;padding:12px 15px}
+  .scene[data-view="task"] .baskets{gap:12px;margin-top:10px}
+  .scene[data-view="task"] .basket{min-height:145px;padding:10px}
+  .scene[data-view="task"] .basket-drop{min-height:82px}
+  .scene[data-view="task"] .sort-tray{gap:7px;margin:10px 0}
+}
+@media(max-width:850px){
+  .context-word{min-height:44px;padding:7px 3px}
+}
+
+/* Автоматическая аккуратная раскладка карточек (лабиринт не затрагивается) */
+.options.layout-one{display:grid;grid-template-columns:1fr;gap:9px}
+.options.layout-two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px 12px}
+.options.layout-three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px 12px}
+.word-grid.layout-one{display:grid;grid-template-columns:1fr;gap:9px}
+.word-grid.layout-two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px 12px}
+.word-grid.layout-three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px 12px}
+.options.layout-one .option,.options.layout-two .option,.options.layout-three .option,
+.word-grid.layout-one .word,.word-grid.layout-two .word,.word-grid.layout-three .word{
+  width:100%;justify-content:flex-start;text-align:left
+}
+@media(max-width:700px){
+  .options.layout-two,.options.layout-three,.word-grid.layout-two,.word-grid.layout-three{grid-template-columns:1fr}
+}
+
+
+.maze-tools{display:flex;justify-content:center;gap:10px;margin-top:8px}
+.maze-tools button{min-height:40px;padding:7px 13px;border:2px solid #cfc7b7;border-radius:10px;background:#fff;color:#4d4762;font-weight:800}
+.maze-tools button:hover,.maze-tools button:focus-visible{border-color:var(--violet);outline:none}
+
+
+@media(min-width:851px){
+  .scene[data-view="task"] .word-grid.layout-two:has(.fill-card){gap:6px 10px}
+  .scene[data-view="task"] .word-grid.layout-two .fill-card{min-height:39px;padding:5px 10px}
+  .scene[data-view="task"] .word-grid.layout-two .fill-card .slot{height:26px;min-width:24px}
+  .scene[data-view="task"] .fill-help{margin:6px 0 2px}
+  .scene[data-view="task"] .letter-tray{min-height:48px;margin:6px 0;padding:4px}
+  .scene[data-view="task"] .letter-tray button{min-height:38px}
+}
+
+.verse-line{display:block;min-height:1.55em}
+.context-source{text-align:right;margin-top:8px;padding-right:8px;font-size:.9em;font-style:italic;color:#5f5870}
+
 </style>
 </head>
 <body><div class="app"><header class="topbar"><div class="brand">✦ СБОРКА МИРА</div><div class="progress-wrap"><div class="progress-label"><span id="progressText">Путь: 0 из 30</span><span id="seriesText">Локация 1/5</span></div><div class="track" role="progressbar" aria-label="Пройденные задания" aria-valuemin="0" aria-valuemax="30" aria-valuenow="0"><div class="fill" id="fill"></div></div></div><button class="iconbtn" id="boardOpen" aria-label="Открыть прозрачную доску">✎ Доска</button></header><main class="shell"><aside class="map" id="map" aria-label="Карта миссии"></aside><section class="scene" id="scene" aria-live="polite"></section></main></div>
@@ -15,46 +82,58 @@
 <script>
 const skills=[
 {name:'Условия выбора',place:'Затопленная низина',resource:'Брёвна для плота',asset:'raft_logs.png',theory:'Сначала определи, от чего зависит гласная: от ударения, суффикса -а-, следующей согласной или значения. Только затем применяй частное правило.',example:'Пример: прикоснуться — после корня нет суффикса -а-, поэтому -кос-.'},
-{name:'Буквы и исключения',place:'Пожарная поляна',resource:'Огнетушитель',asset:'fire_extinguisher.png',theory:'Выдели корень, назови условие, выбери букву и отдельно проверь список исключений. Для -раст-/-ращ-/-рос-: а перед ст, щ; о перед с.',example:'Пример: подросший — перед с пишется о.'},
+{name:'Буквы и исключения',place:'Пылающая поляна',resource:'Огнетушитель',asset:'fire_extinguisher.png',theory:'Выдели корень, назови условие, выбери букву и отдельно проверь список исключений. Для -раст-/-ращ-/-рос-: а перед ст, щ; о перед с.',example:'Пример: подросший — перед с пишется о.'},
 {name:'Омонимичные корни',place:'Туман омонимов',resource:'Фонарь',asset:'lantern.png',theory:'Совпадение букв ещё не доказывает чередование. Уточни значение и способ проверки: правило чередования, проверочное слово, словарь или другая морфема.',example:'Пример: гора — проверяем словом горы; это не -гар-/-гор- со значением горения.'},
 {name:'Сложные слова',place:'Заросшая тропа',resource:'Компас',asset:'compass.png',theory:'В сложном слове два корня. Раздели его на смысловые части, найди соединительную гласную, затем проверь каждый корень отдельно.',example:'Пример: водоросли → вод- + -рос-; нужный корень стоит вторым.'},
 {name:'Поиск в контексте',place:'Башня наблюдения',resource:'Сигнальный маяк',asset:'signal_beacon.png',theory:'Читай текст в два прохода: сначала отмечай знакомые модели корней, затем проверяй значение и условие написания каждого кандидата.',example:'Пример: «Трава подросла у воды» — кандидат подросла, корень -рос-.'}
 ];
-const Q=(s,p,o,a,x='single',y='',z='условие выбора')=>{const kinds=['single','multi','fillMulti','paint','maze','mazePath','drag'];return kinds.includes(x)?{s,p,o,a,type:x,why:y,cat:z}:{s,p,o,a,type:kinds.includes(y)?y:'single',why:x,cat:kinds.includes(y)?z:(y||z)}};
+const Q=(s,p,o,a,x='single',y='',z='условие выбора')=>{const kinds=['single','multi','fillMulti','paint','maze','mazePath','drag','context','classify'];return kinds.includes(x)?{s,p,o,a,type:x,why:y,cat:z}:{s,p,o,a,type:kinds.includes(y)?y:'single',why:x,cat:kinds.includes(y)?z:(y||z)}};
 const tasks=[
-Q(0,'Какое условие управляет корнем в слове «прикосновение»?',['ударение','суффикс -а- после корня','значение слова','последняя согласная'],1,'В паре -кас-/-кос- выбор зависит от суффикса -а-.'),
-Q(0,'Перемести карточку «выращенный» в зону с нужным условием. Можно перетащить её мышью или выбрать карточку и нажать на зону.',['ударение','суффикс -а-','следующая согласная','значение'],2,'В -раст-/-ращ-/-рос- важна следующая согласная.','drag'),
-Q(0,'Выбери группу, где выбор зависит от значения.',['-гар-/-гор-, -зар-/-зор-','-бер-/-бир-, -тер-/-тир-','-мак-/-мок-, -равн-/-ровн-','-кас-/-кос-, -лаг-/-лож-'],2,'У этих пар различаются смысловые оттенки.'),
-Q(0,'Что нужно проверить первым в слове «загорелый»?',['наличие суффикса -а-','ударение в корне','значение «покрывшийся загаром»','букву после корня'],1,'Для -гар-/-гор- ключевое условие — ударение.'),
-Q(0,'Выбери все пары, зависящие от суффикса -а-.',['-кас-/-кос-','-бер-/-бир-','-раст-/-рос-','-мак-/-мок-'],[0,1],'У -кас-/-кос- и е/и-чередований учитывается суффикс -а-.','multi'),
-Q(0,'Расставь шаги алгоритма: какой шаг идёт сразу после выделения корня?',['вспомнить исключения','назвать условие выбора','поставить оценку','переписать слово'],1,'После выделения корня определяют условие выбора.'),
-Q(1,'Вставь букву: заг…реть у костра.',['а','о'],1,'Без ударения в -гар-/-гор- пишется о.','single','условие выбора'),
-Q(1,'Вставь букву: прик…саться к коре.',['а','о'],0,'После корня есть суффикс -а-, поэтому -кас-.','single','условие выбора'),
-Q(1,'Вставь букву: молодая пор…сль.',['а','о'],1,'Поросль пишется через о по основному правилу: перед с без последующего т пишется о.','single','условие выбора'),
-Q(1,'Выбери правильное слово для сообщения леснику.',['собирём припасы','соберём припасы','собирем припасы','собирём припасы'],1,'Нет суффикса -а-, значит пишется -бер-.','single','условие выбора'),
-Q(1,'Пройди по лабиринту от старта к финишу, выбирая только слова, в корнях которых на месте пропуска пишется буква о. Ходить можно вверх, вниз, вправо и влево.',['разг..рается','прик..саться','соб..рать','прик..снулся','выр..щенный','выт..реть','выр..внять','изл..жить','выр..сли'],[0,3,6,7,8],'Маршрут верен: разгорается → прикоснулся → выровнять → изложить → выросли. Во всех выбранных корнях на месте пропуска пишется о.','mazePath','условие выбора'),
-Q(1,'Сначала вставь пропущенную букву в каждом слове, затем выбери два исключения.',['р..сток','к..сание','..трасль','з..рница'],[0,2],'Росток и отрасль — исключения.','fillMulti','исключение'),
-Q(2,'В каком слове -гор- является чередующимся корнем?',['горевать о друге','гористая местность','загореться от искры','горчичный цвет'],2,'В слове «загореться» действует чередование -гар-/-гор-. В остальных вариантах гласная относится к другим, омонимичным корням.','single','омоним'),
-Q(2,'В каком слове сочетание -рос- только похоже на чередующийся корень -раст-/-ращ-/-рос-, но входит в другой корень?',['зар..сли','водор..сли','р..скошный','выр..сли'],2,'Роскошный имеет корень -роскош-. В остальных словах представлен чередующийся корень -раст-/-ращ-/-рос-.','single','омоним'),
-Q(2,'Какие слова имеют проверяемую гласную, а не чередование?',['гористый','горевать','загорелый','поклониться'],[0,1],'Гористый проверяется словом горы, горевать — горе.','multi','омоним'),
-Q(2,'Как доказать написание слова «творение»?',['подобрать «затвор»','применить правило -твар-/-твор-','проверить словом «тварь»','запомнить как приставку'],1,'В корне -твар-/-твор- выбор зависит от ударения: без ударения пишется о — творение, творить; под ударением пишется та гласная, которая слышится — творчество, тварь.','single','омоним'),
-Q(2,'Выбери словарное слово, не относящееся к чередованию.',['озарение','озорной','зарница','зорька'],1,'Озорной — словарное слово с омонимичным сочетанием букв.','single','словарное'),
-Q(2,'В каком слове похожее сочетание букв не относится к чередующемуся корню -лаг-/-лож-?',['прил..жение','предл..жить','л..жбина','изл..жение'],2,'В слове «ложбина» выделяется корень -ложбин-. В остальных словах действует чередование -лаг-/-лож-.','single','омоним'),
-Q(3,'Закрась корень с чередованием в слове «прикосновение».',['при','кос','нов','ени','е'],[1],'В слове «прикосновение» чередующийся корень -кос-.','paint','не видит корень'),
-Q(3,'Закрась корень с чередованием в слове «равноправный».',['равн','о','прав','н','ый'],[0],'В слове «равноправный» чередующийся корень -равн-.','paint','не видит корень'),
-Q(3,'Закрась корень с чередованием в слове «плодотворный».',['плод','о','твор','н','ый'],[2],'В слове «плодотворный» чередующийся корень -твор-.','paint','не видит корень'),
-Q(3,'Закрась корень с чередованием в слове «светозарный».',['свет','о','зар','н','ый'],[2],'В слове «светозарный» чередующийся корень -зар-.','paint','не видит корень'),
-Q(3,'Закрась корень с чередованием в слове «благотворительный».',['благо','твор','ительн','ый'],[1],'В слове «благотворительный» чередующийся корень -твор-.','paint','не видит корень'),
-Q(3,'Закрась корень с чередованием в слове «самовозгорание».',['сам','о','воз','гор','а','ни','е'],[3],'В слове «самовозгорание» чередующийся корень -гор-. После него следуют суффиксы -а- и -ни-, затем окончание -е.','paint','не видит корень'),
-Q(4,'Нажми на слово с чередующимся корнем: «Утром заря озарила гористый берег».',['Утром','заря','озарила','гористый','берег'],[1,2],'Заря и озарила содержат -зар-; гористый проверяется словом горы.','multi','не видит в контексте'),
-Q(4,'Найди все нужные слова в наборе.',['касание','косичка','прикоснуться','косой','касса'],[0,2],'Касание и прикоснуться относятся к -кас-/-кос-.','multi','не видит в контексте'),
-Q(4,'В предложении «Плот коснулся берега, а кусты подросли» отметь два слова с чередующимися корнями.',['плот','коснулся','берега','кусты','подросли'],[1,4],'Коснулся содержит корень -кас-/-кос-, а подросли — корень -раст-/-ращ-/-рос-.','multi','не видит в контексте'),
-Q(4,'Третий лишний: какое слово не содержит чередующийся корень -гар-/-гор-?',['заг..релый','приг..рок','выг..ревший'],1,'Пригорок связан со словом «гора»: гласная проверяется словом «горы». В словах «загорелый» и «выгоревший» действует чередование -гар-/-гор-.','single','омоним'),
-Q(4,'Выбери предложение с двумя чередующимися корнями.',['Росток вырос у воды.','Горы озарило солнце.','Коса коснулась травы.','Берег зарос камышом.'],0,'Росток (исключение) и вырос содержат изучаемый корень.','single','не видит в контексте'),
-Q(4,'Финальный поиск: отметь все слова, относящиеся к корням -лаг-/-лож-.',['предлагать','предлог','полог','изложение','логово'],[0,1,2,3],'Предлагать, предлог, полог и изложение относятся к модели -лаг-/-лож-; полог — исключение.','multi','не видит в контексте')
+Q(0,'Выбери ряд, где во всех словах выбор гласной в чередующемся корне зависит от суффикса -а-.',['собирать, вытирать, касаться','начать, подскочить, снимать','загореть, принимать, творить','выращенный, коснуться, заровнять'],0,'single','Только в ряду «собирать, вытирать, касаться» во всех трёх словах выбор гласной связан с наличием или отсутствием суффикса -а-. В остальных рядах смешаны разные условия выбора.','условие выбора'),
+Q(0,'Перемести карточку «расстилать» в зону с нужным условием. Можно перетащить её мышью или выбрать карточку и нажать на зону.',['ударение','суффикс -а-','следующая согласная','значение'],1,'drag','В корне -стел-/-стил- выбор Е/И связан с суффиксом -а-.','условие выбора'),
+Q(0,'Выбери группу корней, где написание определяется прежде всего значением слова.',['-гар-/-гор-, -зар-/-зор-','-бер-/-бир-, -тер-/-тир-','-мак-/-мок-, -равн-/-ровн-','-скак-/-скоч-, -лаг-/-лож-'],2,'single','В парах -мак-/-мок- и -равн-/-ровн- выбор связан со значением.','условие выбора'),
+Q(0,'Какое условие нужно проверить первым в слове «подскочить»?',['ударение в корне','суффикс -а- после корня','согласную после гласной корня','значение «прыжок»'],2,'single','В модели -скак-/-скоч- безударная гласная зависит от последующей согласной.','условие выбора'),
+Q(0,'Какие модели объединены одним условием: выбор гласной зависит от суффикса -а- после корня?',['-бер-/-бир-','-кас-/-кос-','-мер-/-мир-','-скак-/-скоч-','-мак-/-мок-'],[0,1,2],'multi','У -бер-/-бир-, -мер-/-мир- и -кас-/-кос- выбор связан с суффиксом -а-. У -скак-/-скоч- важна следующая согласная, у -мак-/-мок- — значение.','условие выбора'),
+Q(0,'Отметь ряды, где во всех словах выбор гласной в чередующемся корне связан с наличием или отсутствием суффикса -а- после корня.',['начать, принять, снять','собирать, касаться, вытирать','подскочить, выращенный, положить','заровнять, промокнуть, загореть'],[0,1],'multi','Верны два ряда. Начать, принять, снять относятся к модели а(я)/им(ин): выбор зависит от наличия или отсутствия суффикса -а-. В словах собирать, касаться, вытирать действует то же условие для моделей -бер-/-бир-, -кас-/-кос-, -тер-/-тир-. В остальных рядах условия выбора другие.','условие выбора'),
+
+Q(1,'Вставь букву: пр…гарь на сковороде.',['а','о'],0,'single','Пригарь — исключение: в безударном корне -гар-/-гор- пишется а.','исключение'),
+Q(1,'В каком слове на месте пропуска пишется А как исключение из правила -скак-/-скоч-?',['выск..чить из комнаты','подск..чить от неожиданности','резкий ск..чок','вск..чить на ноги'],2,'single','Скачок — исключение; в остальных словах перед ч пишется о.','исключение'),
+Q(1,'Сначала вставь пропущенную букву в каждом слове. Затем отметь слова и сочетания, правописание которых с корнем -равн-/-ровн- нужно запоминать.',['пор..вну','р..внина','ур..вень воды','р..вняйся на ведущего','р..весник брата','выр..внять поверхность','выр..внять шансы','ур..внять права','ср..внять поверхность','подр..внять края'],[0,1,2,3,4,6],'fillMulti','Правописание слов «поровну», «равнина», «уровень», «равняйся», «ровесник» и глагола «выровнять» нужно запоминать.','правописание -равн-/-ровн-'),
+Q(1,'Сначала вставь пропущенные буквы. Затем отметь слова, в которых выбор гласной объясняется тем же условием, что и в слове «касаться».',['соб..рать сведения','бл..стеть на солнце','расст..лать покрывало','к..саться стены','выж..гать узор','заг..реть на солнце'],[0,2,3,4],'fillMulti','В словах «собирать», «расстилать», «касаться», «выжигать» выбор гласной зависит от наличия суффикса -а- после корня. В слове «блестеть» суффикса -а- после корня нет, а в слове «загореть» выбор гласной зависит от ударения.','условие выбора'),
+Q(1,'Пройди по лабиринту от старта к финишу, выбирая только слова, в чередующихся корнях которых на месте пропуска пишется буква О. Ходить можно по вертикали, горизонтали и диагонали.',['разг..реться','прик..саться','ск..кать','з..рница','пром..кнуть','прик..снуться','выр..щенный','выск..чить','м..кать','покл..ниться','пл..вец','изл..жить','к..сание','..трасль','р..внина','выр..сли'],[0,5,4,9,10,7,11,15],'mazePath','Маршрут верен: разгореться → прикоснуться → промокнуть → поклониться → пловец → выскочить → изложить → выросли.','условие выбора'),
+Q(1,'Отметь все слова-исключения.',['з..рница','утв..рь','отр..сль','выр..щенный','р..стовщик','прик..сновение'],[1,2,4],'multi','Утварь, отрасль и ростовщик традиционно запоминаются как исключения; остальные слова подчиняются основным моделям.','исключение'),
+
+Q(2,'В каком слове -гор- является чередующимся корнем?',['горевать о друге','гористая местность','загореться от искры','горчичный цвет'],2,'single','В слове «загореться» действует чередование -гар-/-гор-; остальные сочетания принадлежат другим корням.','омоним'),
+Q(2,'В каком слове -мир- относится к чередующемуся корню -мер-/-мир-?',['умирать от жажды','примирять спорящих','мировой океан','миролюбивый сосед'],0,'single','В слове «умирать» действует чередование -мер-/-мир-. В остальных словах корень связан со значением «мир».','омоним'),
+Q(2,'Отметь слова, в которых мир/мер — омонимичные корни, а не чередующийся корень -мер-/-мир-.',['примерять пальто','примирять друзей','замирать от страха','умереть внезапно'],[0,1],'multi','Примерять связано с мерой, примирять — с миром; замирать и умереть относятся к модели -мер-/-мир-.','омоним'),
+Q(2,'В каком слове сочетание -твор- не относится к чередующемуся корню -твар-/-твор- со значением создания?',['сотворить чудо','творение мастера','затворить дверь','благотворительность'],2,'single','В слове «затворить» другой корень, связанный со словом «затвор».','омоним'),
+Q(2,'Выбери словарное слово, не относящееся к чередованию -зар-/-зор-.',['озарение','озорной','зарница','зорька'],1,'single','Озорной — словарное слово с омонимичным сочетанием букв.','словарное'),
+Q(2,'В каком слове похожее сочетание букв не относится к чередующемуся корню -лаг-/-лож-?',['прил..жение','предл..жить','л..жбина','изл..жение'],2,'single','В слове «ложбина» самостоятельный корень -ложбин-; в остальных словах действует модель -лаг-/-лож-.','омоним'),
+
+Q(3,'Закрась корень с чередованием в слове «неприкосновенный».',['не','при','кос','нов','енн','ый'],[2],'paint','В слове «неприкосновенный» чередующийся корень -кос-.','не видит корень'),
+Q(3,'Закрась корень с чередованием в слове «равноценный».',['равн','о','цен','н','ый'],[0],'paint','В слове «равноценный» первый корень -равн-.','не видит корень'),
+Q(3,'Закрась чередующийся корень в слове «словосочетание».',['слов','о','со','чет','а','ни','е'],[3],'paint','В слове «словосочетание» выделяется корень -чет-; сочетание относится к исключениям в модели -чет-/-чит-.','не видит корень'),
+Q(3,'Закрась корень с чередованием в слове «самовозгорание».',['сам','о','воз','гор','а','ни','е'],[3],'paint','В слове «самовозгорание» чередующийся корень -гор-.','не видит корень'),
+Q(3,'Закрась корень с чередованием в слове «плодотворный».',['плод','о','твор','н','ый'],[2],'paint','В слове «плодотворный» второй корень -твор-.','не видит корень'),
+Q(3,'Закрась корень с чередованием в слове «непромокаемый».',['не','про','мок','а','ем','ый'],[2],'paint','В слове «непромокаемый» корень -мок- связан со значением «становиться мокрым, пропускать влагу».','не видит корень'),
+
+Q(4,'Прочитай фрагмент. Нажми прямо в тексте на все слова с чередующимися корнями.',['Горит','заря','Клонится','день','к','закату','Творит','вечернюю','прохладу','бор','И','тихо','плавают','лучи','по','перекатам'],[0,1,2,6,12],'context','В тексте работают модели -гар-/-гор-, -зар-/-зор-, -клан-/-клон-, -твар-/-твор-, -плав-/-плов-.','не видит в контексте'),
+Q(4,'Прочитай фрагмент. Нажми прямо в тексте на все слова с чередующимися корнями.',['Туман','ложится','пологом','в','низинах','И','в','зарослях','не','видно','больше','птиц','Их','сон','касается','и','клонит','клювы','ниц'],[1,2,7,14,16],'context','Ложится, пологом, зарослях, касается и клонит связаны с изучаемыми моделями чередования; «полог» — исключение для -лаг-/-лож-.','не видит в контексте'),
+Q(4,'Отметь прямо в предложении слова, в которых выбор гласной в чередующемся корне зависит от суффикса -а- после корня.',['Путники','собирали','вещи','вытирали','мокрые','карты','касались','ладонями','остывших','камней','проверяя','костровище','перед','отходом','и','начинали','спуск','к','реке'],[1,3,6,15],'context','Собирали, вытирали, касались и начинали относятся к разным моделям чередования, но выбор гласной в них связан с суффиксом -а-.','условие выбора'),
+Q(4,'Прочитай предложение. Отметь прямо в тексте все слова с чередованием а(я)/им(ин).',['Перед','съёмкой','режиссёр','напоминал','актёрам','принять','исходное','положение','снять','первую','сцену','и','внимательно','воспринимать','его','указания'],[3,5,8,12,13],'context','Напоминал, принять, снять, внимательно и воспринимать относятся к модели а(я)/им(ин).','не видит в контексте'),
+Q(4,'Выбери все сочетания, в которых действует чередование -мер-/-мир-.',['замирать от страха','умирать от жажды','примерять пальто','примирять друзей','замерить расстояние','помириться после ссоры'],[0,1],'multi','Замирать и умирать относятся к чередующемуся корню -мер-/-мир-. В остальных сочетаниях мир/мер принадлежат омонимичным корням.','омоним'),
+Q(4,'Прочитай мини-текст. Нажми прямо в тексте на все слова с чередующимися корнями.',['На','рассвете','Ростислав','решил','постелить','плащ','на','заросшей','травой','поляне','Он','наклонился','к','ручью','промокнул','рукав','вытер','руки','и','стал','собирать','сухие','ветки'],[2,4,7,11,14,16,20],'context','В тексте встречаются исключение Ростислав и модели -стел-/-стил-, -раст-/-ращ-/-рос-, -клан-/-клон-, -мак-/-мок-, -тер-/-тир-, -бер-/-бир-.','не видит в контексте')
 ];
-tasks[11].letters=['о','а','о','а'];
+tasks[1].token='расстилать';
+tasks[8].letters=['о','а','о','а','о','о','о','а','о','о'];
+tasks[9].letters=['и','е','и','а','и','о'];
 for(let n=18;n<=23;n++){tasks[n].paint=true;tasks[n].type='multi'}
+tasks[24].contextText='Горит заря.\nКлонится день к закату.\nТворит вечернюю прохладу бор.\nИ тихо плавают лучи по перекатам.';tasks[24].contextSource='С.\xa0Балашев «Настроение»';
+tasks[25].contextText='Туман ложится пологом в низинах.\nИ в зарослях не видно больше птиц.\nИх сон касается и клонит клювы ниц.';tasks[25].contextSource='С.\xa0Балашев «Настроение»';
+tasks[26].contextText='Путники собирали вещи, вытирали мокрые карты, касались ладонями остывших камней, проверяя костровище перед отходом, и начинали спуск к реке.';
+tasks[27].contextText='Перед съёмкой режиссёр напоминал актёрам принять исходное положение, снять первую сцену и внимательно воспринимать его указания.';
+tasks[29].contextText='На рассвете Ростислав решил постелить плащ на заросшей травой поляне. Он наклонился к ручью, промокнул рукав, вытер руки и стал собирать сухие ветки.';
+
 const hints=[
 {rule:'В корнях -кас-/-кос- пиши а, если сразу после корня есть суффикс -а-. Если его нет, пиши о.',example:'Нейтральный пример: коснуться двери — после корня нет суффикса -а-.'},
 {rule:'Для -раст-/-ращ-/-рос- смотри на согласную после гласной: перед ст и щ пишется а, перед с — о.',example:'Слова-ориентиры: растение, выращивать, вырос.'},
@@ -87,26 +166,227 @@ const hints=[
 {rule:'Подсчитай изучаемые корни в каждом предложении, проверяя слова по одному. Исключение всё равно относится к своей модели корня.',example:'Нейтральный пример: «Отрасль быстро выросла» — два слова с моделью -раст-/-ращ-/-рос-.'},
 {rule:'В -лаг-/-лож- перед г обычно пишется а, перед ж — о. Под ударением пишется слышимая гласная; полог — исключение. Отсеивай омонимичные корни.',example:'Нейтральный пример: прилагать, приложение; логово к этой модели не относится.'}
 ];
+
+// Теория по навыку: намеренно общая, чтобы подсказка помогала выбрать алгоритм, но не выдавала ответ текущего задания.
+const skillHints=[
+{rule:'Сначала определи тип условия: ударение, суффикс -а-, следующая согласная или значение. Для моделей Е/И и части корней с а(я)/им(ин) особенно важно увидеть строение слова, а не подбирать проверочное слово.',example:'Нейтральный пример: в слове «вытирать» сначала устанавливают модель корня и наличие суффикса -а-.'},
+{rule:'Сначала примени общее правило конкретного корня, затем обязательно проверь исключения. Не переноси одно правило на все чередующиеся корни: условия у разных групп различаются.',example:'Нейтральный пример: в слове «раздирать» после определения корня проверяют наличие суффикса -а-.'},
+{rule:'Вспомни определение понятия «корень слова». Чтобы установить корень, определи лексическое значение слова и подбери однокоренные слова. Не делай вывод только по совпадению букв.',example:''},
+{rule:'Вспомни, что такое корень слова и как устроены сложные слова. Определи значимые части самостоятельно и найди среди них корень с чередованием.',example:''},
+{rule:'При работе с текстом сначала найди слова-кандидаты, затем для каждого установи значение корня и условие написания. Проверяй весь текст, а не только знакомые сочетания букв.',example:'Нейтральный пример: после первого чтения можно отметить несколько кандидатов, а окончательный выбор сделать только после проверки их корней.'}
+];
+
 let state={screen:'start',i:0,answers:[],selected:[],retry:false,retryList:[],retryPos:0,reflection:''};
 const scene=document.querySelector('#scene'),map=document.querySelector('#map');
 function esc(s){return String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}
 function fillMarkup(word,n){let value=state.fillValues?.[n]||'',parts=word.split('..');return `${esc(parts[0])}<span class="slot" aria-label="пропущенная буква">${esc(value)}</span>${esc(parts[1]||'')}`}
 function chooseFillCard(n){state.activeFill=n;document.querySelectorAll('.fill-card').forEach(b=>b.classList.toggle('active',+b.dataset.n===n));document.querySelector('#fillHelp').textContent=`Вставь букву в слово «${tasks[state.retry?state.retryList[state.retryPos]:state.i].o[n]}» с клавиатуры или выбери ниже.`}
-function putLetter(letter,q){if(state.activeFill==null)return;state.fillValues[state.activeFill]=letter.toLowerCase();let card=document.querySelector(`[data-n="${state.activeFill}"]`);card.innerHTML=fillMarkup(q.o[state.activeFill],state.activeFill);card.classList.add('filled');card.classList.remove('active');card.setAttribute('aria-label',q.o[state.activeFill].replace('..',letter)+'. Нажмите ещё раз, чтобы выбрать как ответ.');let next=q.o.findIndex((_,i)=>!state.fillValues[i]);state.activeFill=next<0?null:next;if(next>=0)chooseFillCard(next);else document.querySelector('#fillHelp').textContent='Все пропуски заполнены. Теперь выбери карточки, которые отвечают на вопрос.'}
+function putLetter(letter,q){if(state.activeFill==null)return;state.fillValues[state.activeFill]=letter.toLowerCase();let card=document.querySelector(`[data-n="${state.activeFill}"]`);card.innerHTML=fillMarkup(q.o[state.activeFill],state.activeFill);card.classList.add('filled');card.classList.remove('active');card.setAttribute('aria-label',q.o[state.activeFill].replace('..',letter)+'. Нажмите ещё раз, чтобы выбрать как ответ.');let next=q.o.findIndex((_,i)=>!state.fillValues[i]);state.activeFill=next<0?null:next;if(next>=0)chooseFillCard(next);else document.querySelector('#fillHelp').textContent='Все пропуски заполнены. Теперь выбери карточки, которые отвечают на вопрос. Если хочешь исправить букву, нажми прямо на подчёркнутую букву в нужной карточке.'}
 function renderMap(){map.innerHTML='<h2>Карта спасения</h2>'+skills.map((s,n)=>{let current=state.screen==='task'?tasks[state.i]?.s:state.screen==='start'?0:5,done=state.answers.filter(a=>a&&tasks[a.index].s===n).length>=6;return `<div class="map-step ${done?'done':''} ${current===n?'active':''}"><div class="dot">${done?'✓':n+1}</div><div><strong>${s.place}</strong><small><img class="map-avatar" src="02_assets/${done?s.asset:'owl_guardian.png'}" alt="">${done?s.resource:'Сова ждёт помощи'}</small></div></div>`}).join('')}
-function progress(){let n=state.answers.length;document.querySelector('#progressText').textContent=`Путь: ${n} из 30`;document.querySelector('#seriesText').textContent=state.screen==='task'?`Локация ${tasks[state.i].s+1}/5`:state.screen==='final'?'Лес спасён':'Миссия';document.querySelector('.track').setAttribute('aria-valuenow',n);document.querySelector('#fill').style.width=(n/30*100)+'%'}
+function progress(){let n=state.answers.filter(a=>a.correct).length;document.querySelector('#progressText').textContent=`Путь: ${n} из 30`;document.querySelector('#seriesText').textContent=state.screen==='task'?`Локация ${tasks[state.i].s+1}/5`:state.screen==='final'?'Лес спасён':'Миссия';document.querySelector('.track').setAttribute('aria-valuenow',n);document.querySelector('#fill').style.width=(n/30*100)+'%'}
 function renderStart(){state.screen='start';scene.innerHTML=`<div class="hero intro-hero"><span class="badge">Миссия по русскому языку · 6–11 класс</span><h1>Лес теряет свои корни</h1><p>Наводнение, огонь и туман разорвали лесные тропы. Ты — герой-собиратель: освой пять навыков и верни жителям всё, что поможет спасти дом.</p></div><div class="content"><div class="start-grid"><div class="card"><h2>Твоя учебная цель</h2><p>Систематизировать корни с чередованием, выбирать верную гласную, помнить исключения и отличать омонимичные корни в словах и тексте.</p><div class="resource character-callout"><img src="02_assets/owl_guardian.png" alt="Сова-хранитель"><span>Сова-хранитель будет выдавать детали после каждой серии.</span></div><button class="primary" id="start">Начать миссию</button></div><div class="card"><h2>Как действовать</h2><ol><li>Прочитай условие.</li><li>При необходимости открой «Теорию».</li><li>Выбери ответ и проверь.</li><li>Ошибки можно повторить в РНО.</li></ol><p><b>Доска</b> открывается поверх задания и не влияет на попытки.</p></div></div></div>`;document.querySelector('#start').onclick=()=>{state.screen='task';renderTask()};sync()}
 function currentTask(){return tasks[state.retry?state.retryList[state.retryPos]:state.i]}
-function renderTask(){state.screen='task';let real=state.retry?state.retryList[state.retryPos]:state.i,q=tasks[real],sk=skills[q.s],hint=hints[real];state.selected=[];state.fillValues=q.type==='fillMulti'?Array(q.o.length).fill(''):[];state.activeFill=q.type==='fillMulti'?0:null;let cls=(q.type==='maze'||q.type==='mazePath')?'options maze':(q.type==='multi'||q.type==='fillMulti')?'word-grid':'options',token=q.type==='drag'?'<button class="drag-token" id="dragToken" draggable="true" aria-pressed="false">выращенный</button>':'',mazeNote=q.type==='mazePath'?'<div class="maze-note" id="mazeNote" aria-live="polite">Начни с клетки «разг..рается».</div>':'',fillTray=q.type==='fillMulti'?'<p class="fill-help" id="fillHelp">Выбери букву для первой карточки с клавиатуры или нажми кнопку.</p><div class="letter-tray" aria-label="Выбор буквы"><button data-letter="а">а</button><button data-letter="о">о</button><button data-letter="е">е</button><button data-letter="и">и</button></div>':'';scene.innerHTML=`<div class="hero"><span class="badge">${state.retry?'РНО · работа над ошибками':`Серия ${q.s+1} · задание ${real%6+1}/6`}</span><h1>${sk.place}</h1><p>${q.s===0?'Вода прибывает. Разложи правила по верным маршрутам.':q.s===1?'Останови огонь точными решениями.':q.s===2?'Фонарь зажжётся, если отличить похожие корни.':q.s===3?'Найди скрытые корни и восстанови тропу.':'Подай верный сигнал всему лесу.'}</p></div><div class="content"><div class="task-head"><div><div class="kicker">Навык: ${sk.name}</div><h2>${state.retry?'Повторяем ошибку':'Продолжай спасение'}</h2></div><button class="theory-btn" id="theoryBtn" aria-expanded="false" aria-controls="theoryCard">Теория</button></div><div class="theory" id="theoryCard" hidden><strong>Правило для этого задания</strong><p>${hint.rule}</p><p class="example">${hint.example}</p></div><div class="prompt">${q.p}</div>${token}<div class="${cls}" id="options">${q.o.map((o,n)=>`<button class="${(q.type==='multi'||q.type==='fillMulti')?'word':'option'} ${q.type==='fillMulti'?'fill-card':''} ${q.type==='drag'?'dropzone':''}" data-n="${n}" aria-pressed="false">${q.type==='fillMulti'?fillMarkup(o,n):esc(o)}</button>`).join('')}</div>${mazeNote}${fillTray}<div id="feedback" aria-live="assertive"></div><div class="actions"><button class="primary" id="check" disabled>Проверить</button></div></div>`;let tb=document.querySelector('#theoryBtn'),tc=document.querySelector('#theoryCard');tb.onclick=()=>{let open=tb.getAttribute('aria-expanded')==='true';tb.setAttribute('aria-expanded',String(!open));tc.hidden=open};document.querySelectorAll('[data-n]').forEach(b=>{b.onclick=()=>{let n=+b.dataset.n;if(q.type==='fillMulti'&&!state.fillValues[n])chooseFillCard(n);else select(n,q)};if(q.type==='drag'){b.ondragover=e=>{e.preventDefault();b.classList.add('dragover')};b.ondragleave=()=>b.classList.remove('dragover');b.ondrop=e=>{e.preventDefault();b.classList.remove('dragover');select(+b.dataset.n,q)}}});document.querySelectorAll('[data-letter]').forEach(b=>b.onclick=()=>putLetter(b.dataset.letter,q));if(q.type==='fillMulti')chooseFillCard(0);if(q.type==='drag'){let t=document.querySelector('#dragToken');t.onclick=()=>{let on=t.getAttribute('aria-pressed')!=='true';t.setAttribute('aria-pressed',on);t.textContent=on?'✓ выращенный — выбрано':'выращенный'};t.ondragstart=e=>e.dataTransfer.setData('text/plain','выращенный')}document.querySelector('#check').onclick=()=>check(real,q);sync()}
-function select(n,q){if(q.type==='mazePath'){let note=document.querySelector('#mazeNote'),last=state.selected.at(-1);if(!state.selected.length&&n!==0){note.textContent='Начать маршрут нужно со старта.';return}if(n===last){state.selected.pop();note.textContent=state.selected.length?'Шаг назад. Продолжай от выделенной клетки.':'Маршрут очищен. Начни со старта.'}else{let adjacent=last===undefined||Math.abs(Math.floor(last/3)-Math.floor(n/3))+Math.abs(last%3-n%3)===1;if(!adjacent||state.selected.includes(n)){note.textContent='Так пойти нельзя: выбери соседнюю клетку вверх, вниз, вправо или влево.';return}state.selected.push(n);note.textContent=n===8?'Финиш достигнут — теперь проверь маршрут.':`Выбрано шагов: ${state.selected.length}.`} }else if(q.type==='multi'||q.type==='fillMulti'){state.selected.includes(n)?state.selected=state.selected.filter(x=>x!==n):state.selected.push(n)}else state.selected=[n];document.querySelectorAll('[data-n]').forEach(b=>{let step=state.selected.indexOf(+b.dataset.n),on=step>=0;b.classList.toggle('selected',on);b.setAttribute('aria-pressed',on);if(q.type==='mazePath')b.dataset.step=on?step+1:''});document.querySelector('#check').disabled=q.type==='mazePath'?state.selected.at(-1)!==8:!state.selected.length}
+function shuffled(arr){let a=[...arr];for(let i=a.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function optionOrder(q){
+  let all=q.o.map((_,i)=>i);
+  // В лабиринте, заданиях на состав слова и вставку букв порядок является частью механики.
+  if(q.paint||['maze','mazePath','paint'].includes(q.type))return all;
+
+  const taskId=tasks.indexOf(q);
+  const storageKey=`worldbuild:last-order:${taskId}`;
+  let previous='';
+  try{previous=localStorage.getItem(storageKey)||''}catch(e){}
+
+  function makeOrder(){
+    let answers=[].concat(q.a);
+    // Если верных вариантов ровно два, разводим их по разным участкам сетки,
+    // но сами позиции тоже рандомизируются.
+    if(q.type==='multi'&&answers.length===2&&q.o.length>=4){
+      let patterns=q.o.length===4?[[0,3],[1,2]]:q.o.length===5?[[0,4],[1,3]]:[];
+      if(patterns.length){
+        let correct=shuffled(answers),
+            wrong=shuffled(all.filter(i=>!answers.includes(i))),
+            pattern=patterns[Math.floor(Math.random()*patterns.length)],
+            order=Array(q.o.length),
+            rest=all.filter(i=>!pattern.includes(i));
+        order[pattern[0]]=correct[0];
+        order[pattern[1]]=correct[1];
+        rest.forEach((pos,i)=>order[pos]=wrong[i]);
+        return order;
+      }
+    }
+    return shuffled(all);
+  }
+
+  let order=makeOrder(), tries=0;
+  const original=all.join(',');
+  const bad=o=>o.join(',')===previous || o.join(',')===original || (o.length>=4 && o.some((v,i)=>v===i));
+  // Для обычных карточек добиваемся заметного перемешивания:
+  // не повторяем прошлый порядок, не оставляем исходный и по возможности
+  // не оставляем ни один вариант на его прежней позиции.
+  while(bad(order) && tries<80){
+    order=makeOrder();
+    tries++;
+  }
+  // Если строгая развязка невозможна из-за ограничений конкретного задания,
+  // всё равно гарантируем хотя бы не исходный и не предыдущий порядок.
+  if(order.join(',')===original || order.join(',')===previous){
+    tries=0;
+    do{order=makeOrder();tries++;}while((order.join(',')===original || order.join(',')===previous) && tries<80);
+  }
+  try{localStorage.setItem(storageKey,order.join(','))}catch(e){}
+  return order;
+}
+function contextMarkup(q){let i=0;return q.contextText.split('\n').map(line=>{let s=line.replace(/[\p{L}Ёё]+(?:-[\p{L}Ёё]+)*/gu,m=>`<button class="context-word" data-n="${i++}" aria-pressed="false">${esc(m)}</button>`);s=s.replace(/<\/button>\s+([,.;:!?…)\]»])/g,'</button>$1');return `<div class="verse-line">${s}</div>`}).join('')}
+function classifyMarkup(q){return `<div class="sort-tray">${q.o.map((x,n)=>`<button class="sort-chip" data-sort="${n}">${esc(x)}</button>`).join('')}</div><div class="baskets">${q.bins.map((x,b)=>`<section class="basket"><h3>${esc(x)}</h3><div class="basket-drop" data-bin="${b}"></div><div class="basket-note">Выбери сочетание, затем корзинку</div></section>`).join('')}</div>`}
+
+function cardLayoutClass(q){
+  if(q.type==='maze'||q.type==='mazePath'||q.type==='context'||q.type==='classify'||q.type==='paint')return '';
+  if(q.type==='fillMulti')return 'layout-two';
+  const count=q.o?.length||0;
+  const maxLen=Math.max(0,...(q.o||[]).map(x=>String(x).replace(/<[^>]+>/g,'').length));
+  const avgLen=count?Math.round((q.o||[]).reduce((s,x)=>s+String(x).replace(/<[^>]+>/g,'').length,0)/count):0;
+  if(maxLen>=34 || avgLen>=25) return 'layout-one';
+  if(count>=8) return 'layout-two';
+  if(count===6) return maxLen>20?'layout-two':'layout-three';
+  if(count===5) return 'layout-one';
+  if(count===4) return maxLen>24?'layout-one':'layout-two';
+  return count<=3?'layout-one':'layout-two';
+}
+function renderTask(){
+state.screen='task';
+let real=state.retry?state.retryList[state.retryPos]:state.i,q=tasks[real],sk=skills[q.s],hint=skillHints[q.s],order=optionOrder(q);
+state.selected=[];state.classified=q.type==='classify'?Array(q.o.length).fill(null):null;state.sortActive=null;
+state.fillValues=q.type==='fillMulti'?Array(q.o.length).fill(''):[];state.activeFill=q.type==='fillMulti'?order[0]:null;
+let cls=(q.type==='maze'||q.type==='mazePath')?'options maze':(q.type==='multi'||q.type==='fillMulti')?'word-grid':'options'; if(real===5) cls+=' single-column';
+let token=q.type==='drag'?`<button class="drag-token" id="dragToken" draggable="true" aria-pressed="false">${esc(q.token||'выращенный')}</button>`:'';
+let mazeNote=q.type==='mazePath'?'<div class="maze-note" id="mazeNote" aria-live="polite">Начни с клетки «разг..реться».</div><div class="maze-tools"><button type="button" id="mazeBack">↶ Шаг назад</button><button type="button" id="mazeReset">Сбросить маршрут</button></div>':'';
+let fillTray=q.type==='fillMulti'?'<p class="fill-help" id="fillHelp">Выбери букву для первой карточки с клавиатуры или нажми кнопку.</p><div class="letter-tray" aria-label="Выбор буквы"><button data-letter="а">а</button><button data-letter="о">о</button><button data-letter="е">е</button><button data-letter="и">и</button></div>':'';
+
+let taskBody='';
+if(q.type==='context'){
+  taskBody=`<div class="context-line" id="options" aria-label="Текст задания">${contextMarkup(q)}</div>${q.contextSource?`<div class="context-source">${esc(q.contextSource)}</div>`:''}`;
+}else if(q.type==='classify'){
+  taskBody=`<div id="options">${classifyMarkup(q)}</div>`;
+}else{
+  taskBody=`${token}<div class="${cls} ${cardLayoutClass(q)}" id="options">${order.map(n=>`<button class="${(q.type==='multi'||q.type==='fillMulti')?'word':'option'} ${q.type==='fillMulti'?'fill-card':''} ${q.type==='drag'?'dropzone':''}" data-n="${n}" aria-pressed="false">${q.type==='fillMulti'?fillMarkup(q.o[n],n):esc(q.o[n])}</button>`).join('')}</div>${mazeNote}${fillTray}`;
+}
+
+scene.innerHTML=`<div class="hero"><span class="badge">${state.retry?'РНО · работа над ошибками':`Серия ${q.s+1} · задание ${real%6+1}/6`}</span><h1>${sk.place}</h1><p>${q.s===0?'Вода прибывает. Разложи правила по верным маршрутам.':q.s===1?'Останови огонь точными решениями.':q.s===2?'Фонарь зажжётся, если отличить похожие корни.':q.s===3?'Найди скрытые корни и восстанови тропу.':'Подай верный сигнал всему лесу.'}</p></div><div class="content"><div class="task-head"><div><div class="kicker">Навык: ${sk.name}</div><h2>${state.retry?'Повторяем ошибку':'Продолжай спасение'}</h2></div><button class="theory-btn" id="theoryBtn" aria-expanded="false" aria-controls="theoryCard">Теория</button></div><div class="theory" id="theoryCard" hidden><strong>Подсказка по текущему навыку</strong><p>${hint.rule}</p>${hint.example?`<p class="example">${hint.example}</p>`:''}</div><div class="prompt">${q.p}</div>${taskBody}<div id="feedback" aria-live="assertive"></div><div class="actions"><button class="primary" id="check" disabled>Проверить</button></div></div>`;
+
+let tb=document.querySelector('#theoryBtn'),tc=document.querySelector('#theoryCard');
+tb.onclick=()=>{let open=tb.getAttribute('aria-expanded')==='true';tb.setAttribute('aria-expanded',String(!open));tc.hidden=open};
+
+if(q.type==='classify'){
+  const refresh=()=>{
+    document.querySelectorAll('[data-sort]').forEach(b=>{let n=+b.dataset.sort;b.classList.toggle('assigned',state.classified[n]!=null);b.style.outline=state.sortActive===n?'3px solid var(--gold)':''});
+    document.querySelectorAll('[data-bin]').forEach(z=>{let bin=+z.dataset.bin;z.innerHTML=state.classified.map((v,n)=>v===bin?`<button class="basket-chip" data-unassign="${n}">${esc(q.o[n])}</button>`:'').join('')});
+    document.querySelectorAll('[data-unassign]').forEach(b=>b.onclick=e=>{e.stopPropagation();state.classified[+b.dataset.unassign]=null;refresh()});
+    document.querySelector('#check').disabled=state.classified.some(v=>v==null)
+  };
+  document.querySelectorAll('[data-sort]').forEach(b=>b.onclick=()=>{state.sortActive=+b.dataset.sort;refresh()});
+  document.querySelectorAll('.basket').forEach(z=>z.onclick=()=>{if(state.sortActive==null)return;state.classified[state.sortActive]=+z.querySelector('[data-bin]').dataset.bin;state.sortActive=null;refresh()});
+  refresh();
+}else{
+  document.querySelectorAll('[data-n]').forEach(b=>{
+    b.onclick=(e)=>{let n=+b.dataset.n;if(q.type==='fillMulti'&&(!state.fillValues[n]||e.target.closest('.slot'))){chooseFillCard(n);return}else select(n,q)};
+    if(q.type==='drag'){b.ondragover=e=>{e.preventDefault();b.classList.add('dragover')};b.ondragleave=()=>b.classList.remove('dragover');b.ondrop=e=>{e.preventDefault();b.classList.remove('dragover');select(+b.dataset.n,q)}}
+  });
+  document.querySelectorAll('[data-letter]').forEach(b=>b.onclick=()=>putLetter(b.dataset.letter,q));
+  if(q.type==='fillMulti')chooseFillCard(order[0]);
+  if(q.type==='mazePath'){
+    const note=document.querySelector('#mazeNote');
+    document.querySelector('#mazeBack').onclick=()=>{
+      if(!state.selected.length){note.textContent='Маршрут пока пуст.';return}
+      state.selected.pop();
+      note.textContent=state.selected.length?'Шаг назад. Выбери новое продолжение.':'Маршрут очищен. Начни со старта.';
+      refreshSelection(q);
+    };
+    document.querySelector('#mazeReset').onclick=()=>{
+      state.selected=[];
+      note.textContent='Маршрут очищен. Начни со старта.';
+      refreshSelection(q);
+    };
+  }
+  if(q.type==='drag'){
+    let t=document.querySelector('#dragToken');
+    t.onclick=()=>{let on=t.getAttribute('aria-pressed')!=='true';t.setAttribute('aria-pressed',on);t.textContent=on?`✓ ${q.token||'выращенный'} — выбрано`:(q.token||'выращенный')};
+    t.ondragstart=e=>e.dataTransfer.setData('text/plain',q.token||'выращенный');
+    let draggingToken=false;t.onpointerdown=()=>draggingToken=true;
+    document.onpointerup=e=>{if(!draggingToken)return;draggingToken=false;let z=document.elementFromPoint(e.clientX,e.clientY)?.closest('[data-n]');if(z)select(+z.dataset.n,q)}
+  }
+}
+document.querySelector('#check').onclick=()=>check(real,q);
+sync()
+}
+function refreshSelection(q){
+  document.querySelectorAll('[data-n]').forEach(b=>{
+    let step=state.selected.indexOf(+b.dataset.n),on=step>=0;
+    b.classList.toggle('selected',on);
+    b.setAttribute('aria-pressed',on);
+    if(q.type==='mazePath')b.dataset.step=on?step+1:'';
+  });
+  document.querySelector('#check').disabled=q.type==='mazePath'?state.selected.at(-1)!==15:!state.selected.length;
+}
+function select(n,q){
+  if(q.type==='mazePath'){
+    let note=document.querySelector('#mazeNote'),last=state.selected.at(-1),existing=state.selected.indexOf(n);
+    if(!state.selected.length&&n!==0){
+      note.textContent='Начать маршрут нужно со старта.';
+      return;
+    }
+    if(existing>=0){
+      if(existing===state.selected.length-1){
+        state.selected.pop();
+        note.textContent=state.selected.length?'Шаг назад. Выбери новое продолжение.':'Маршрут очищен. Начни со старта.';
+      }else{
+        state.selected=state.selected.slice(0,existing+1);
+        note.textContent=`Вернулись к шагу ${existing+1}. Теперь можно выбрать другой путь.`;
+      }
+      refreshSelection(q);
+      return;
+    }
+    let cols=4,dr=Math.abs(Math.floor(last/cols)-Math.floor(n/cols)),dc=Math.abs(last%cols-n%cols),
+        adjacent=last===undefined||(dr<=1&&dc<=1&&(dr+dc)>0);
+    if(!adjacent){
+      note.textContent='Так пойти нельзя: выбери соседнюю клетку по вертикали, горизонтали или диагонали.';
+      return;
+    }
+    state.selected.push(n);
+    note.textContent=n===15?'Финиш достигнут — теперь проверь маршрут.':`Выбрано шагов: ${state.selected.length}.`;
+  }else if(q.type==='multi'||q.type==='fillMulti'||q.type==='context'){
+    state.selected.includes(n)?state.selected=state.selected.filter(x=>x!==n):state.selected.push(n);
+  }else{
+    state.selected=[n];
+  }
+  refreshSelection(q);
+}
 function equal(a,b){let aa=[].concat(a).sort().join(','),bb=[].concat(b).sort().join(',');return aa===bb}
 function retryMessage(real,attempt){const messages=['Хорошая попытка! Перечитай условие и попробуй ещё раз — у тебя получится.','Пока не совпало. Сравни все варианты внимательнее и сделай новую попытку.','Не сдавайся! Если нужно, открой «Теорию», затем проверь своё решение ещё раз.','Ты уже близко. Проверь каждый выбранный элемент и попробуй изменить решение.','Ошибаться нормально: именно так правило запоминается. Попробуй ещё раз.'];return messages[(real+attempt-1)%messages.length]}
-function check(real,q){let spellingOk=q.type!=='fillMulti'||q.letters.every((x,i)=>state.fillValues[i]===x),ok=equal(state.selected,q.a)&&spellingOk,prev=state.answers.find(a=>a.index===real);if(!state.retry){if(prev){prev.attempts++;if(ok)prev.correct=true}else state.answers.push({index:real,correct:ok,first:ok,attempts:1,cat:q.cat})}let attempts=prev?prev.attempts:1,f=document.querySelector('#feedback');f.className='feedback '+(ok?'ok':'bad');f.innerHTML=ok?`<strong>Верно!</strong> ${q.why}`:`<strong>Попробуй ещё раз.</strong> ${retryMessage(real,attempts)}`;document.querySelectorAll('[data-n]').forEach(b=>b.disabled=true);let btn=document.querySelector('#check');btn.disabled=false;btn.textContent=ok?'Дальше':'Попробовать ещё';btn.onclick=()=>{if(!ok){document.querySelectorAll('[data-n]').forEach(b=>{b.disabled=false;b.classList.remove('selected');b.setAttribute('aria-pressed','false')});state.selected=[];if(q.type==='fillMulti'){state.fillValues=Array(q.o.length).fill('');document.querySelectorAll('.fill-card').forEach((b,n)=>{b.innerHTML=fillMarkup(q.o[n],n);b.classList.remove('filled','active')});state.activeFill=0;chooseFillCard(0)}btn.disabled=true;btn.textContent='Проверить';f.innerHTML='';f.className='';btn.onclick=()=>check(real,q);return}next(real,q)};sync()}
+function check(real,q){let spellingOk=q.type!=='fillMulti'||q.letters.every((x,i)=>state.fillValues[i]===x),selectionOk=q.type==='classify'?equal(state.classified,q.a):equal(state.selected,q.a),ok=q.type==='classify'?selectionOk:(selectionOk&&spellingOk),prev=state.answers.find(a=>a.index===real);if(!state.retry){if(prev){prev.attempts++;if(ok)prev.correct=true}else state.answers.push({index:real,correct:ok,first:ok,attempts:1,cat:q.cat})}let attempts=prev?prev.attempts:1,f=document.querySelector('#feedback');f.className='feedback '+(ok?'ok':'bad');f.innerHTML=ok?`<strong>Верно!</strong> ${q.why}`:(q.type==='fillMulti'?(spellingOk?`<strong>Буквы вставлены верно.</strong> Ошибка во второй части: проверь, какие слова и сочетания ты отметил.`:(selectionOk?`<strong>Слова выбраны верно.</strong> Ошибка в первой части: проверь вставленные буквы. Нажми на подчёркнутую букву в нужной карточке, чтобы изменить её.`:`<strong>Есть две ошибки.</strong> Проверь и вставленные буквы, и выбор слов. Букву можно изменить нажатием прямо на подчёркнутую букву.`)):`<strong>Попробуй ещё раз.</strong> ${retryMessage(real,attempts)}`);document.querySelectorAll('[data-n]').forEach(b=>b.disabled=true);let btn=document.querySelector('#check');btn.disabled=false;btn.textContent=ok?'Дальше':'Попробовать ещё';btn.onclick=()=>{if(!ok){if(q.type==='classify'){renderTask();return}
+document.querySelectorAll('[data-n]').forEach(b=>{b.disabled=false});
+if(q.type==='fillMulti'){
+  if(!selectionOk){
+    state.selected=[];
+    document.querySelectorAll('[data-n]').forEach(b=>{b.classList.remove('selected');b.setAttribute('aria-pressed','false')});
+  }else{
+    refreshSelection(q);
+  }
+  state.activeFill=null;
+  document.querySelectorAll('.fill-card').forEach(b=>b.classList.remove('active'));
+  document.querySelector('#fillHelp').textContent=!spellingOk
+    ?'Исправь неверную букву: нажми прямо на подчёркнутую букву в любой карточке и выбери новую.'
+    :'Буквы верны. Исправь только выбор карточек.';
+}else{
+  document.querySelectorAll('[data-n]').forEach(b=>{b.classList.remove('selected');b.setAttribute('aria-pressed','false')});
+  state.selected=[];
+}
+btn.disabled=true;btn.textContent='Проверить';f.innerHTML='';f.className='';btn.onclick=()=>check(real,q);return}next(real,q)};sync()}
 function next(real,q){if(state.retry){state.retryPos++;if(state.retryPos>=state.retryList.length){state.retry=false;renderReflection()}else renderTask();return}if((real+1)%6===0){renderReward(q.s);return}state.i++;renderTask()}
 function renderReward(s){scene.innerHTML=`<div class="hero"><span class="badge">Серия завершена</span><h1>${skills[s].place} спасена</h1><p>Освоенный навык изменил общую карту.</p></div><div class="content"><div class="resource"><img class="asset-thumb" src="02_assets/${skills[s].asset}" alt=""><b>${skills[s].resource}</b><span>Добавлено на карту спасения.</span></div><div class="reward-art"><img class="resource-art" src="02_assets/${skills[s].asset}" alt="${skills[s].resource}"></div><div class="actions"><button class="primary" id="continue">${s===4?'Посмотреть результаты':'К следующей локации'}</button></div></div>`;document.querySelector('#continue').onclick=()=>{if(s===4)renderStats();else{state.i++;renderTask()}};sync()}
 function renderStats(){state.screen='stats';let first=state.answers.filter(a=>a.first).length,attempts=state.answers.reduce((x,a)=>x+a.attempts,0);let rows=skills.map((s,n)=>{let a=state.answers.filter(x=>tasks[x.index].s===n),c=a.filter(x=>x.correct).length;return `<tr><td>${s.name}</td><td>${c}/6</td><td>${a.filter(x=>x.first).length}</td></tr>`}).join('');let cats={};state.answers.filter(a=>!a.first).forEach(a=>cats[a.cat]=(cats[a.cat]||0)+1);let errors=Object.keys(cats).length?Object.entries(cats).map(([k,v])=>`<li>${k}: ${v}</li>`).join(''):'<li>Ошибок в первой попытке нет.</li>';scene.innerHTML=`<div class="hero"><span class="badge">Первая статистика сохранена</span><h1>Карта почти собрана</h1><p>Прогресс показывает путь, а не оценку. Посмотри, что уже получается.</p></div><div class="content"><div class="start-grid"><div class="card"><h2>Итог миссии</h2><p><b>Выполнено:</b> ${state.answers.length}/30<br><b>Верно с первой попытки:</b> ${first}/30<br><b>Всего попыток:</b> ${attempts}</p><table class="stats"><thead><tr><th>Навык</th><th>Освоено</th><th>С первой</th></tr></thead><tbody>${rows}</tbody></table></div><div class="card"><h2>Анализ ошибок</h2><ul>${errors}</ul><p>РНО повторяет только задания, где первая попытка была неверной; эта статистика останется без изменений.</p><button class="primary" id="rno">${state.answers.some(a=>!a.first)?'Начать РНО':'К рефлексии'}</button></div></div></div>`;document.querySelector('#rno').onclick=()=>{state.retryList=state.answers.filter(a=>!a.first).map(a=>a.index);if(state.retryList.length){state.retry=true;state.retryPos=0;renderTask()}else renderReflection()};sync()}
 function renderReflection(){state.screen='reflection';scene.innerHTML=`<div class="hero"><span class="badge">Рефлексия · не влияет на результат</span><h1>Что стало твоей суперсилой?</h1><p>Выбери один ответ — он нужен только тебе.</p></div><div class="content"><div class="card"><div class="reflection">${['Теперь я сначала определяю условие выбора.','Я лучше замечаю исключения.','Я отличаю омонимичные корни.','Я научился находить корни в тексте.'].map((x,n)=>`<label><input type="radio" name="r" value="${n}">${x}</label>`).join('')}</div><div class="actions"><button class="primary" id="finish" disabled>Открыть финал</button></div></div></div>`;document.querySelectorAll('[name=r]').forEach(r=>r.onchange=()=>{state.reflection=r.value;document.querySelector('#finish').disabled=false});document.querySelector('#finish').onclick=renderFinal;sync()}
-function renderFinal(){state.screen='final';scene.innerHTML=`<div class="hero"><span class="badge">Миссия выполнена</span><h1>Лес снова дышит</h1><p>Плот вывез жителей из воды, огнетушитель остановил огонь, фонарь рассеял туман, компас вернул тропы, а маяк собрал всех вместе.</p></div><div class="content"><div class="final-scene"><img class="final-scene-bg" src="02_assets/saved_forest_bg.png" alt="Карта спасённого леса"><img class="final-friends" src="02_assets/forest_friends.png" alt="Спасённые лесные жители"></div><div class="final-map">${skills.map(s=>`<div class="card"><img class="asset-thumb" src="02_assets/${s.asset}" alt=""><b>${s.resource}</b><small style="display:block">${s.name}</small></div>`).join('')}</div><div class="resource"><img class="resource-badge" src="02_assets/guardian_badge.png" alt="Знак Хранителя корней"><span><b>Знак Хранителя корней</b>: каждый освоенный навык стал частью спасённого мира.</span></div><div class="actions"><button class="secondary" id="statsAgain">Статистика</button><button class="primary" id="restart">Пройти заново</button></div></div>`;document.querySelector('#statsAgain').onclick=renderStats;document.querySelector('#restart').onclick=()=>{state={screen:'start',i:0,answers:[],selected:[],retry:false,retryList:[],retryPos:0,reflection:''};renderStart()};sync()}
+function renderFinal(){state.screen='final';scene.innerHTML=`<div class="hero"><span class="badge">Миссия выполнена</span><h1>Лес снова дышит</h1><p>Плот вывез жителей из воды, огнетушитель остановил огонь, фонарь рассеял туман, компас вернул тропы, а маяк собрал всех вместе.</p></div><div class="content"><div class="final-scene"><img class="final-scene-bg" src="02_assets/saved_forest_bg.png" alt="Карта спасённого леса"><img class="final-friends" src="02_assets/forest_friends.png" alt="Спасённые лесные жители"></div><div class="final-map">${skills.map(s=>`<div class="card"><img class="asset-thumb" src="02_assets/${s.asset}" alt=""><b>${s.resource}</b><small style="display:block">${s.name}</small></div>`).join('')}</div><div class="resource"><img class="resource-badge" src="02_assets/guardian_badge.png" alt="Знак Хранителя корней"><span><b>Знак Хранителя корней</b>: каждый освоенный навык стал частью спасённого мира.</span></div><div class="actions"><button class="secondary" id="statsAgain">Статистика</button><button class="primary" id="restart">Пройти заново</button></div></div>`;document.querySelector('#statsAgain').onclick=renderStats;document.querySelector('#restart').onclick=()=>{clearBoard();state={screen:'start',i:0,answers:[],selected:[],retry:false,retryList:[],retryPos:0,reflection:''};renderStart()};sync()}
 function sync(){scene.dataset.view=state.screen;scene.dataset.series=state.screen==='task'?String(currentTask()?.s??0):state.screen==='start'?'0':'';renderMap();progress()}
 new MutationObserver(()=>{if(state.screen!=='task')return;let real=state.retry?state.retryList[state.retryPos]:state.i,q=tasks[real];if(!q?.paint)return;let box=document.querySelector('#options');if(!box)return;box.className='paint-strip';box.querySelectorAll('[data-n]').forEach(b=>{b.className='paint-part'+(state.selected.includes(+b.dataset.n)?' selected':'')})}).observe(scene,{childList:true,subtree:true});
 // Прозрачная доска: canvas лежит над заданием, а DOM задания не пересоздаётся.
@@ -114,8 +394,21 @@ const layer=document.querySelector('#boardLayer'),canvas=document.querySelector(
 function resizeBoard(){let d=devicePixelRatio||1,rect=canvas.getBoundingClientRect();let old=document.createElement('canvas');old.width=canvas.width;old.height=canvas.height;old.getContext('2d').drawImage(canvas,0,0);canvas.width=rect.width*d;canvas.height=rect.height*d;ctx.scale(d,d);ctx.lineWidth=4;ctx.lineCap='round';ctx.strokeStyle='#d54c45';if(old.width)ctx.drawImage(old,0,0,old.width/d,old.height/d)}
 function point(e){let r=canvas.getBoundingClientRect();return{x:e.clientX-r.left,y:e.clientY-r.top}}
 canvas.onpointerdown=e=>{drawing=true;last=point(e);canvas.setPointerCapture(e.pointerId)};canvas.onpointermove=e=>{if(!drawing)return;let p=point(e);ctx.beginPath();ctx.moveTo(last.x,last.y);ctx.lineTo(p.x,p.y);ctx.stroke();last=p};canvas.onpointerup=()=>drawing=false;canvas.onpointercancel=()=>drawing=false;
-document.querySelector('#boardOpen').onclick=()=>{layer.hidden=false;requestAnimationFrame(resizeBoard);document.querySelector('#boardClose').focus()};document.querySelector('#boardClose').onclick=()=>{layer.hidden=true;document.querySelector('#boardOpen').focus()};document.querySelector('#boardClear').onclick=()=>ctx.clearRect(0,0,canvas.width,canvas.height);window.addEventListener('resize',()=>{if(!layer.hidden)resizeBoard()});
-document.addEventListener('keydown',e=>{if(e.target?.id==='theoryBtn'&&(e.key==='Enter'||e.key===' ')){e.preventDefault();e.target.click()}});
+document.querySelector('#boardOpen').onclick=()=>{layer.hidden=false;requestAnimationFrame(resizeBoard);document.querySelector('#boardClose').focus()};document.querySelector('#boardClose').onclick=()=>{layer.hidden=true;document.querySelector('#boardOpen').focus()};function clearBoard(){ctx.save();ctx.setTransform(1,0,0,1,0,0);ctx.clearRect(0,0,canvas.width,canvas.height);ctx.restore()}document.querySelector('#boardClear').onclick=clearBoard;window.addEventListener('resize',()=>{if(!layer.hidden)resizeBoard()});
+document.addEventListener('keydown',e=>{if(e.target?.matches?.('button')&&(e.key==='Enter'||e.key===' ')){e.preventDefault();e.target.click()}});
 document.addEventListener('keydown',e=>{if(state.screen!=='task'||state.activeFill==null||!['а','о','е','и'].includes(e.key.toLowerCase()))return;let real=state.retry?state.retryList[state.retryPos]:state.i,q=tasks[real];if(q.type==='fillMulti'){e.preventDefault();putLetter(e.key,q)}});
-renderStart();
+
+(function(){
+  const m=location.hash.match(/^#resume=(\d+)$/);
+  if(m){
+    const oneBased=Math.max(1,Math.min(30,Number(m[1])||1));
+    const idx=oneBased-1;
+    state.i=idx;
+    state.answers=Array.from({length:idx},(_,i)=>({index:i,correct:true,first:true,attempts:1,cat:tasks[i].cat}));
+    state.screen='task';
+    renderTask();
+  }else{
+    renderStart();
+  }
+})();
 </script></body></html>
