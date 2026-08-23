@@ -73,7 +73,7 @@
 }
 
 .verse-line{display:block;min-height:1.55em}
-.context-source{text-align:right;margin-top:8px;padding-right:8px;font-size:.9em;font-style:italic;color:#5f5870}
+.context-source{text-align:left;margin-top:8px;padding-left:8px;font-size:.9em;font-style:italic;color:#5f5870}
 
 </style>
 </head>
@@ -101,7 +101,7 @@ Q(1,'В каком слове на месте пропуска пишется А
 Q(1,'Сначала вставь пропущенную букву в каждом слове. Затем отметь слова и сочетания, правописание которых с корнем -равн-/-ровн- нужно запоминать.',['пор..вну','р..внина','ур..вень воды','р..вняйся на ведущего','р..весник брата','выр..внять поверхность','выр..внять шансы','ур..внять права','ср..внять поверхность','подр..внять края'],[0,1,2,3,4,6],'fillMulti','Правописание слов «поровну», «равнина», «уровень», «равняйся», «ровесник» и глагола «выровнять» нужно запоминать.','правописание -равн-/-ровн-'),
 Q(1,'Сначала вставь пропущенные буквы. Затем отметь слова, в которых выбор гласной объясняется тем же условием, что и в слове «касаться».',['соб..рать сведения','бл..стеть на солнце','расст..лать покрывало','к..саться стены','выж..гать узор','заг..реть на солнце'],[0,2,3,4],'fillMulti','В словах «собирать», «расстилать», «касаться», «выжигать» выбор гласной зависит от наличия суффикса -а- после корня. В слове «блестеть» суффикса -а- после корня нет, а в слове «загореть» выбор гласной зависит от ударения.','условие выбора'),
 Q(1,'Пройди по лабиринту от старта к финишу, выбирая только слова, в чередующихся корнях которых на месте пропуска пишется буква О. Ходить можно по вертикали, горизонтали и диагонали.',['разг..реться','прик..саться','ск..кать','з..рница','пром..кнуть','прик..снуться','выр..щенный','выск..чить','м..кать','покл..ниться','пл..вец','изл..жить','к..сание','..трасль','р..внина','выр..сли'],[0,5,4,9,10,7,11,15],'mazePath','Маршрут верен: разгореться → прикоснуться → промокнуть → поклониться → пловец → выскочить → изложить → выросли.','условие выбора'),
-Q(1,'Отметь все слова-исключения.',['з..рница','утв..рь','отр..сль','выр..щенный','р..стовщик','прик..сновение'],[1,2,4],'multi','Утварь, отрасль и ростовщик традиционно запоминаются как исключения; остальные слова подчиняются основным моделям.','исключение'),
+Q(1,'Сначала вставь пропущенную букву в каждом слове. Затем отметь все слова-исключения.',['з..рница','утв..рь','отр..сль','выр..щенный','р..стовщик','прик..сновение'],[1,2,4],'fillMulti','Утварь, отрасль и ростовщик традиционно запоминаются как исключения; остальные слова подчиняются основным моделям.','исключение'),
 
 Q(2,'В каком слове -гор- является чередующимся корнем?',['горевать о друге','гористая местность','загореться от искры','горчичный цвет'],2,'single','В слове «загореться» действует чередование -гар-/-гор-; остальные сочетания принадлежат другим корням.','омоним'),
 Q(2,'В каком слове -мир- относится к чередующемуся корню -мер-/-мир-?',['умирать от жажды','примирять спорящих','мировой океан','миролюбивый сосед'],0,'single','В слове «умирать» действует чередование -мер-/-мир-. В остальных словах корень связан со значением «мир».','омоним'),
@@ -122,11 +122,12 @@ Q(4,'Прочитай фрагмент. Нажми прямо в тексте н
 Q(4,'Отметь прямо в предложении слова, в которых выбор гласной в чередующемся корне зависит от суффикса -а- после корня.',['Путники','собирали','вещи','вытирали','мокрые','карты','касались','ладонями','остывших','камней','проверяя','костровище','перед','отходом','и','начинали','спуск','к','реке'],[1,3,6,15],'context','Собирали, вытирали, касались и начинали относятся к разным моделям чередования, но выбор гласной в них связан с суффиксом -а-.','условие выбора'),
 Q(4,'Прочитай предложение. Отметь прямо в тексте все слова с чередованием а(я)/им(ин).',['Перед','съёмкой','режиссёр','напоминал','актёрам','принять','исходное','положение','снять','первую','сцену','и','внимательно','воспринимать','его','указания'],[3,5,8,12,13],'context','Напоминал, принять, снять, внимательно и воспринимать относятся к модели а(я)/им(ин).','не видит в контексте'),
 Q(4,'Выбери все сочетания, в которых действует чередование -мер-/-мир-.',['замирать от страха','умирать от жажды','примерять пальто','примирять друзей','замерить расстояние','помириться после ссоры'],[0,1],'multi','Замирать и умирать относятся к чередующемуся корню -мер-/-мир-. В остальных сочетаниях мир/мер принадлежат омонимичным корням.','омоним'),
-Q(4,'Прочитай мини-текст. Нажми прямо в тексте на все слова с чередующимися корнями.',['На','рассвете','Ростислав','решил','постелить','плащ','на','заросшей','травой','поляне','Он','наклонился','к','ручью','промокнул','рукав','вытер','руки','и','стал','собирать','сухие','ветки'],[2,4,7,11,14,16,20],'context','В тексте встречаются исключение Ростислав и модели -стел-/-стил-, -раст-/-ращ-/-рос-, -клан-/-клон-, -мак-/-мок-, -тер-/-тир-, -бер-/-бир-.','не видит в контексте')
+Q(4,'Прочитай мини-текст. Нажми прямо в тексте на все слова с чередующимися корнями.',['На','рассвете','Ростислав','решил','постелить','плащ','на','заросшей','травой','поляне.','Он','наклонился','к','ручью,','промокнул','рукав,','вытер','руки','и','стал','собирать','сухие','ветки.'],[2,4,7,11,14,16,20],'context','В тексте встречаются исключение Ростислав и модели -стел-/-стил-, -раст-/-ращ-/-рос-, -клан-/-клон-, -мак-/-мок-, -тер-/-тир-, -бер-/-бир-.','не видит в контексте')
 ];
 tasks[1].token='расстилать';
 tasks[8].letters=['о','а','о','а','о','о','о','а','о','о'];
 tasks[9].letters=['и','е','и','а','и','о'];
+tasks[11].letters=['а','а','а','а','о','о'];
 for(let n=18;n<=23;n++){tasks[n].paint=true;tasks[n].type='multi'}
 tasks[24].contextText='Горит заря.\nКлонится день к закату.\nТворит вечернюю прохладу бор.\nИ тихо плавают лучи по перекатам.';tasks[24].contextSource='С.\xa0Балашев «Настроение»';
 tasks[25].contextText='Туман ложится пологом в низинах.\nИ в зарослях не видно больше птиц.\nИх сон касается и клонит клювы ниц.';tasks[25].contextSource='С.\xa0Балашев «Настроение»';
@@ -181,7 +182,7 @@ const scene=document.querySelector('#scene'),map=document.querySelector('#map');
 function esc(s){return String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}
 function fillMarkup(word,n){let value=state.fillValues?.[n]||'',parts=word.split('..');return `${esc(parts[0])}<span class="slot" aria-label="пропущенная буква">${esc(value)}</span>${esc(parts[1]||'')}`}
 function chooseFillCard(n){state.activeFill=n;document.querySelectorAll('.fill-card').forEach(b=>b.classList.toggle('active',+b.dataset.n===n));document.querySelector('#fillHelp').textContent=`Вставь букву в слово «${tasks[state.retry?state.retryList[state.retryPos]:state.i].o[n]}» с клавиатуры или выбери ниже.`}
-function putLetter(letter,q){if(state.activeFill==null)return;state.fillValues[state.activeFill]=letter.toLowerCase();let card=document.querySelector(`[data-n="${state.activeFill}"]`);card.innerHTML=fillMarkup(q.o[state.activeFill],state.activeFill);card.classList.add('filled');card.classList.remove('active');card.setAttribute('aria-label',q.o[state.activeFill].replace('..',letter)+'. Нажмите ещё раз, чтобы выбрать как ответ.');let next=q.o.findIndex((_,i)=>!state.fillValues[i]);state.activeFill=next<0?null:next;if(next>=0)chooseFillCard(next);else document.querySelector('#fillHelp').textContent='Все пропуски заполнены. Теперь выбери карточки, которые отвечают на вопрос. Если хочешь исправить букву, нажми прямо на подчёркнутую букву в нужной карточке.'}
+function putLetter(letter,q){if(state.activeFill==null)return;state.fillValues[state.activeFill]=letter.toLowerCase();let card=document.querySelector(`[data-n="${state.activeFill}"]`);card.innerHTML=fillMarkup(q.o[state.activeFill],state.activeFill);card.classList.add('filled');card.classList.remove('active');card.setAttribute('aria-label',q.o[state.activeFill].replace('..',letter)+'. Нажмите ещё раз, чтобы выбрать как ответ.');let next=(state.fillOrder||q.o.map((_,i)=>i)).find(i=>!state.fillValues[i]);state.activeFill=next===undefined?null:next;if(next!==undefined)chooseFillCard(next);else document.querySelector('#fillHelp').textContent='Все пропуски заполнены. Теперь выбери карточки, которые отвечают на вопрос. Если хочешь исправить букву, нажми прямо на подчёркнутую букву в нужной карточке.'}
 function renderMap(){map.innerHTML='<h2>Карта спасения</h2>'+skills.map((s,n)=>{let current=state.screen==='task'?tasks[state.i]?.s:state.screen==='start'?0:5,done=state.answers.filter(a=>a&&tasks[a.index].s===n).length>=6;return `<div class="map-step ${done?'done':''} ${current===n?'active':''}"><div class="dot">${done?'✓':n+1}</div><div><strong>${s.place}</strong><small><img class="map-avatar" src="02_assets/${done?s.asset:'owl_guardian.png'}" alt="">${done?s.resource:'Сова ждёт помощи'}</small></div></div>`}).join('')}
 function progress(){let n=state.answers.filter(a=>a.correct).length;document.querySelector('#progressText').textContent=`Путь: ${n} из 30`;document.querySelector('#seriesText').textContent=state.screen==='task'?`Локация ${tasks[state.i].s+1}/5`:state.screen==='final'?'Лес спасён':'Миссия';document.querySelector('.track').setAttribute('aria-valuenow',n);document.querySelector('#fill').style.width=(n/30*100)+'%'}
 function renderStart(){state.screen='start';scene.innerHTML=`<div class="hero intro-hero"><span class="badge">Миссия по русскому языку · 6–11 класс</span><h1>Лес теряет свои корни</h1><p>Наводнение, огонь и туман разорвали лесные тропы. Ты — герой-собиратель: освой пять навыков и верни жителям всё, что поможет спасти дом.</p></div><div class="content"><div class="start-grid"><div class="card"><h2>Твоя учебная цель</h2><p>Систематизировать корни с чередованием, выбирать верную гласную, помнить исключения и отличать омонимичные корни в словах и тексте.</p><div class="resource character-callout"><img src="02_assets/owl_guardian.png" alt="Сова-хранитель"><span>Сова-хранитель будет выдавать детали после каждой серии.</span></div><button class="primary" id="start">Начать миссию</button></div><div class="card"><h2>Как действовать</h2><ol><li>Прочитай условие.</li><li>При необходимости открой «Теорию».</li><li>Выбери ответ и проверь.</li><li>Ошибки можно повторить в РНО.</li></ol><p><b>Доска</b> открывается поверх задания и не влияет на попытки.</p></div></div></div>`;document.querySelector('#start').onclick=()=>{state.screen='task';renderTask()};sync()}
@@ -256,8 +257,20 @@ function cardLayoutClass(q){
 function renderTask(){
 state.screen='task';
 let real=state.retry?state.retryList[state.retryPos]:state.i,q=tasks[real],sk=skills[q.s],hint=skillHints[q.s],order=optionOrder(q);
+// Серия 1, задание 6/6: строки обязательно меняют позиции при каждом новом показе.
+// Меняем только визуальный порядок; ключ ответа остаётся привязан к исходным индексам.
+if(real===5){
+  const variants=[[1,0,3,2],[2,3,0,1],[3,2,1,0],[1,3,0,2],[2,0,3,1],[3,0,1,2]];
+  const k='worldbuild:task5-row-variant';
+  let prev=-1;
+  try{prev=Number(sessionStorage.getItem(k) ?? -1)}catch(e){}
+  let choices=variants.map((_,i)=>i).filter(i=>i!==prev);
+  let pick=choices[Math.floor(Math.random()*choices.length)];
+  order=variants[pick];
+  try{sessionStorage.setItem(k,String(pick))}catch(e){}
+}
 state.selected=[];state.classified=q.type==='classify'?Array(q.o.length).fill(null):null;state.sortActive=null;
-state.fillValues=q.type==='fillMulti'?Array(q.o.length).fill(''):[];state.activeFill=q.type==='fillMulti'?order[0]:null;
+state.fillValues=q.type==='fillMulti'?Array(q.o.length).fill(''):[];state.fillOrder=q.type==='fillMulti'?[...order]:[];state.activeFill=q.type==='fillMulti'?order[0]:null;
 let cls=(q.type==='maze'||q.type==='mazePath')?'options maze':(q.type==='multi'||q.type==='fillMulti')?'word-grid':'options'; if(real===5) cls+=' single-column';
 let token=q.type==='drag'?`<button class="drag-token" id="dragToken" draggable="true" aria-pressed="false">${esc(q.token||'выращенный')}</button>`:'';
 let mazeNote=q.type==='mazePath'?'<div class="maze-note" id="mazeNote" aria-live="polite">Начни с клетки «разг..реться».</div><div class="maze-tools"><button type="button" id="mazeBack">↶ Шаг назад</button><button type="button" id="mazeReset">Сбросить маршрут</button></div>':'';
@@ -265,7 +278,7 @@ let fillTray=q.type==='fillMulti'?'<p class="fill-help" id="fillHelp">Выбер
 
 let taskBody='';
 if(q.type==='context'){
-  taskBody=`<div class="context-line" id="options" aria-label="Текст задания">${contextMarkup(q)}</div>${q.contextSource?`<div class="context-source">${esc(q.contextSource)}</div>`:''}`;
+  taskBody=`<div class="context-line" id="options" aria-label="Текст задания">${contextMarkup(q)}${q.contextSource?`<div class="context-source">${esc(q.contextSource)}</div>`:''}</div>`;
 }else if(q.type==='classify'){
   taskBody=`<div id="options">${classifyMarkup(q)}</div>`;
 }else{
